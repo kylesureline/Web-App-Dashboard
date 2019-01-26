@@ -1,0 +1,80 @@
+/* Variables */
+:root {
+  --color-1: #696cb7; /* Light purple */
+  --color-2: #686cb7; /* Medium dark purple */
+  --color-3: #444367; /* Dark purple */
+  --color-4: #5257b7; /* Purple */
+  --color-5: #76c284; /* Green */
+  --color-6: #69a8b7; /* Blue */
+  --color-7: #5c5b5b; /* Very dark gray */
+  --color-8: #a9a9a9; /* Dark gray */
+  --color-9: #848484; /* Medium gray */
+  --color-10: #ccc;    /* Light gray */
+  --color-11: #fafafa; /* Very light gray */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: .25em 0;
+}
+
+h1 span.light {
+  font-weight: lighter;
+}
+
+h1 span.bold {
+  font-weight: bolder;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: var(--color-1);
+  color: white;
+}
+
+/* header::after {
+  content: '';
+  display: table;
+  clear: both;
+} */
+
+.header-nav ul {
+  display: flex;
+  justify-content: flex-end;
+  padding: .75em 1em;
+}
+
+.header-nav ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-nav ul li:first-child {
+  margin-right: auto;
+}
+
+.header-nav ul li:last-child {
+  border-left: 1px solid var(--color-4);
+  padding-left: .5em;
+}
+
+aside {
+  background-color: var(--color-2);
+}
