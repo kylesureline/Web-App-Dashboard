@@ -11,70 +11,90 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <header>
-      <nav class="header-nav">
-        <ul>
-          <li><h1><span class="bold">Your</span><span class="light">App&trade;</span></h1></li>
-          <li>
-            <svg class="icon-bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-              <path d="M24 18v-8c0-5.5-4.5-10-10-10S4 4.5 4 10v8l-4 8h9.1c.5 2.3 2.5 4 4.9 4s4.4-1.7 4.9-4H28l-4-8zM14 28c-1.3 0-2.4-.8-2.8-2h5.6c-.4 1.2-1.5 2-2.8 2zM3 24l3-6v-8c0-4.4 3.6-8 8-8s8 3.6 8 8v8l3 6H3z" fill="#fff"/>
-            </svg>
-          </li>
-          <li>Josh Sullivan</li>
-        </ul>
-      </nav>
-    </header>
+    <div class="container">
+      <header>
+        <nav class="header-nav">
+          <ul>
+            <li class="logo">
+              <a href="#">
+                <h1>
+                  <span class="bold">Your</span><span class="light">App&trade;</span>
+                </h1>
+              </a>
+            </li>
+            <li class="notification">
+              <a class="notification-link" href="#">
+                <svg class="icon-notification" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                  <path d="M24 18v-8c0-5.5-4.5-10-10-10S4 4.5 4 10v8l-4 8h9.1c.5 2.3 2.5 4 4.9 4s4.4-1.7 4.9-4H28l-4-8zM14 28c-1.3 0-2.4-.8-2.8-2h5.6c-.4 1.2-1.5 2-2.8 2zM3 24l3-6v-8c0-4.4 3.6-8 8-8s8 3.6 8 8v8l3 6H3z" fill="#fff"/>
+                </svg>
+                <span class="notification-indicator">.</span>
+              </a>
+            </li>
+            <li class="user-nav">
+              <a href="#">
+                <img class="icon-user" src="images/member-2.jpg" alt="User profile picture" />
+                <span>Josh Sullivan</span>
+              </a>
+            </li>
+            <!-- <li class="user-nav"><img class="icon-user" src="images/member-2.jpg" alt="User profile picture" /></li>
+            <li>Josh Sullivan</li> -->
+          </ul>
+        </nav>
+      </header>
 
-    <main>
-      <div class="content-header">
-        <h2>Dashboard</h2>
-        <input type="text" placeholder="Search">
-      </div>
+      <aside>
+        <nav class="sidebar-nav">
+          <ul>
+            <li>icon-dashboard</li>
+            <li>icon-members</li>
+            <li>icon-visits</li>
+            <li>icon-settings</li>
+          </ul>
+        </nav>
+      </aside>
 
-      <div class="traffic">
-        <h3>Traffic</h3>
-      </div>
+      <main>
+        <div class="content-header">
+          <h2>Dashboard</h2>
+          <input type="text" placeholder="Search">
+        </div>
 
-      <div class="daily-traffic">
-        <h3>Daily Traffic</h3>
-      </div>
+        <div class="traffic">
+          <h3>Traffic</h3>
+        </div>
 
-      <div class="mobile-users">
-        <h3>Mobile Users</h3>
-      </div>
+        <div class="daily-traffic">
+          <h3>Daily Traffic</h3>
+        </div>
 
-      <div class="social-stats">
-        <h3>Social Stats</h3>
-      </div>
+        <div class="mobile-users">
+          <h3>Mobile Users</h3>
+        </div>
 
-      <div class="new-members">
-        <h3>New Members</h3>
-      </div>
+        <div class="social-stats">
+          <h3>Social Stats</h3>
+        </div>
 
-      <div class="recent-activity">
-        <h3>Recent Activity</h3>
-      </div>
+        <div class="new-members">
+          <h3>New Members</h3>
+        </div>
 
-      <div class="message-user">
-        <h3>Message User</h3>
-      </div>
+        <div class="recent-activity">
+          <h3>Recent Activity</h3>
+        </div>
 
-      <div class="Settings">
-        <h3>Settings</h3>
-      </div>
+        <div class="message-user">
+          <h3>Message User</h3>
+        </div>
 
-    </main>
+        <div class="settings">
+          <h3>Settings</h3>
+        </div>
+      </main>
 
-    <aside>
-      <nav class="sidebar-nav">
-        <ul>
-          <li>icon-dashboard</li>
-          <li>icon-members</li>
-          <li>icon-visits</li>
-          <li>icon-settings</li>
-        </ul>
-      </nav>
-    </aside>
+    </div>
+
+
     <script src="js/app.js">
     </script>
   </body>
