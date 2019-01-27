@@ -1,0 +1,20 @@
+// ======================================
+//  Icons
+// ======================================
+
+.icon-dashboard,
+.icon-members,
+.icon-visits,
+.icon-settings,
+.icon-notification {
+  width: 24px;
+}
+
+.icon-dashboard,
+.icon-members,
+.icon-visits,
+.icon-settings {
+  @media(min-width: 375px) {
+    width: 32px;
+  }
+}

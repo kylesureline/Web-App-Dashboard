@@ -1,0 +1,79 @@
+// ======================================
+//  Header
+// ======================================
+
+.header {
+  grid-area: header;
+  background-color: map-get($theme-primary, 3);
+  color: #fff;
+  padding: .75em;
+  @media (max-width: 320px) {
+    padding: .25em;
+  }
+  & ul {
+    @media (max-width: 320px) {
+      margin: 0 .25em;
+    }
+  }
+}
+
+.header a {
+  color: #fff;
+}
+
+.header-nav ul {
+  @include flexy($disp: flex, $just: flex-end, $align-items: center);
+  padding: 0;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.user-nav {
+  border-left: 1px solid map-get($theme-primary, 2);
+  padding: .5em 0 .5em 1em;
+  font-size: .85em;
+  @media (max-width: 320px) {
+    padding-left: .5em;
+    font-size: .75em;
+  }
+  @media (min-width: 375px) {
+    font-size: 1em;
+  }
+  & span {
+    padding-left: .5em;
+  }
+}
+
+.header-nav li a {
+  @include flexy($disp: flex, $align-items: center);
+}
+
+.notification-link {
+  padding: .5em;
+}
+
+.notification {
+  padding-right: 1em;
+  position: relative;
+  @media (max-width: 320px) {
+    padding-right: 0;
+  }
+}
+
+.notification-indicator {
+  font-size: 48px;
+  color: map-get($theme-secondary, 2);
+  position: absolute;
+  top: -36px;
+  right: 16px;
+  @media (max-width: 320px) {
+    right: 4px;
+  }
+}
+
+.icon-user {
+  width: 32px;
+  border-radius: 50%;
+}

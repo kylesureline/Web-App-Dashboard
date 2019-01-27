@@ -1,0 +1,50 @@
+// ======================================
+//  Aside
+// ======================================
+
+.sidebar {
+  grid-area: aside;
+  background-color: map-get($theme-primary, 1);
+  text-align: center;
+}
+
+.sidebar-nav li a {
+  padding: .75em 0;
+  margin: .5em 0;
+  display: block;
+  @media (min-width: 1024px) {
+    @include flexy($disp: flex, $just: space-between, $align-items: center);
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+.sidebar-nav .active {
+  border-left: 3px solid map-get($theme-secondary, 2);
+  border-top: 3px solid map-get($theme-primary, 1);
+  border-bottom: 3px solid map-get($theme-primary, 1);
+}
+
+.sidebar-nav a {
+  border-left: 3px solid map-get($theme-primary, 1);
+  color: map-get($theme-tertiary, 3);
+}
+
+.sidebar-nav .active {
+  color: #fff
+}
+
+.sidebar-nav svg path {
+  fill: map-get($theme-tertiary, 3);
+}
+
+.sidebar-nav .active path {
+  fill: #fff;
+}
+
+.sidebar-nav span {
+  display: none;
+  @media (min-width: 1024px) {
+    display: inline-block;
+  }
+}
