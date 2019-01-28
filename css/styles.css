@@ -575,17 +575,26 @@ select {
   outline: 0;
 }
 
-.main-search {
-  background-image: url(../icons/icon-search.svg);
-  background-repeat: no-repeat;
-  background-position: calc(100% - 8px);
-  background-size: 20px;
+.search-bar {
+  position: relative;
 }
-.main-search::placeholder {
+.search-bar input::placeholder {
   color: #ccc;
 }
-.main-search:focus {
-  background-image: none;
+.search-bar input:focus + button {
+  display: none;
+}
+.search-bar button {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  background-color: none;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+}
+.search-bar button img {
+  height: 24px;
 }
 
 .switch {
