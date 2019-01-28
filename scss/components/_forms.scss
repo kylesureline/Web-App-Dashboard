@@ -25,14 +25,14 @@ select {
   }
   button {
     position: absolute;
-    top: 4px;
+    top: 7px;
     right: 2px;
     background-color: none;
     border: none;
     outline: 0;
     cursor: pointer;
     img {
-      height: 24px;
+      height: 20px;
     }
   }
 }
@@ -112,4 +112,9 @@ select {
   .switch-label {
     margin: auto 0;
   }
+}
+
+#time-zone {
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
