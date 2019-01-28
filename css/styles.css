@@ -365,7 +365,8 @@ h2 {
 
 h3 {
   text-transform: uppercase;
-  color: #a9a9a9;
+  color: #5c5b5b;
+  font-size: 1em;
 }
 
 ul {
@@ -385,21 +386,25 @@ ul {
     padding: 0.25em;
   }
 }
-@media (max-width: 320px) {
-  .header ul {
-    margin: 0 0.25em;
-  }
-}
 
 .header a {
   color: #fff;
 }
 
-.header-nav ul {
+.header-nav > ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0;
+}
+@media (max-width: 320px) {
+  .header-nav > ul {
+    margin: 0 0.25em;
+  }
+}
+.header-nav > ul > li > a {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -409,26 +414,20 @@ ul {
 .user-nav {
   border-left: 1px solid #5257b7;
   padding: 0.5em 0 0.5em 1em;
-  font-size: 0.85em;
+  font-size: 1em;
 }
 @media (max-width: 320px) {
   .user-nav {
     padding-left: 0.5em;
-    font-size: 0.75em;
-  }
-}
-@media (min-width: 375px) {
-  .user-nav {
-    font-size: 1em;
   }
 }
 .user-nav span {
   padding-left: 0.5em;
 }
-
-.header-nav li a {
-  display: flex;
-  align-items: center;
+@media (max-width: 375px) {
+  .user-nav span {
+    display: none;
+  }
 }
 
 .notification-link {
@@ -443,6 +442,29 @@ ul {
   .notification {
     padding-right: 0;
   }
+}
+
+.notification-list {
+  position: absolute;
+  right: 1em;
+  background-color: #ccc;
+  margin: 0;
+  width: 200px;
+  display: none;
+  grid-gap: 2px;
+  border: 2px solid #ccc;
+}
+.notification-list li {
+  padding-left: 0.5em;
+  color: #444367;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notification-list a {
+  color: #444367;
+  padding: 0.5em;
 }
 
 .notification-indicator {
@@ -533,6 +555,77 @@ ul {
   }
 }
 
+.icon-notification:hover path {
+  fill: #7ad676;
+}
+
+form {
+  color: #5c5b5b;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5em;
+  width: 100%;
+  outline: 0;
+}
+
+.main-search {
+  background-image: url(../icons/icon-search.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 8px);
+  background-size: 20px;
+}
+.main-search::placeholder {
+  color: #ccc;
+}
+.main-search:focus {
+  background-image: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 72px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch input:checked + .slider {
+  background-color: #686cb7;
+}
+.switch input:checked + .slider:before {
+  transform: translateX(38px);
+}
+.switch .slider {
+  border-radius: 34px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.switch .slider:before {
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
 .light {
   font-weight: lighter;
 }
@@ -541,40 +634,25 @@ ul {
   font-weight: bolder;
 }
 
-.content-header {
-  grid-area: content-header;
+.alert {
+  color: #fff;
+  background-color: #686cb7;
+  border-radius: 4px;
+  padding: 1em 1.5em;
+  font-size: 0.85em;
+  line-height: 1.5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
 }
-
-.traffic {
-  grid-area: traffic;
+.alert span {
+  padding-right: 0.5em;
 }
-
-.daily-traffic {
-  grid-area: daily-traffic;
-}
-
-.mobile-users {
-  grid-area: mobile-users;
-}
-
-.social-stats {
-  grid-area: social-stats;
-}
-
-.new-members {
-  grid-area: new-members;
-}
-
-.recent-activity {
-  grid-area: recent-activity;
-}
-
-.message-user {
-  grid-area: message-user;
-}
-
-.settings {
-  grid-area: settings;
+.alert a {
+  color: inherit;
+  font-size: 1.5em;
+  margin-left: auto;
+  padding: 0.25em 0.5em;
 }
 
 .container {
@@ -617,6 +695,46 @@ ul {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "content-header content-header  content-header" "traffic        traffic         daily-traffic" "social-stats   social-stats    mobile-users" "new-members    recent-activity recent-activity" "message-user   settings        ...";
   }
+}
+
+.main > div {
+  padding: 0.5em;
+}
+
+.content-header {
+  grid-area: content-header;
+}
+
+.traffic {
+  grid-area: traffic;
+}
+
+.daily-traffic {
+  grid-area: daily-traffic;
+}
+
+.mobile-users {
+  grid-area: mobile-users;
+}
+
+.social-stats {
+  grid-area: social-stats;
+}
+
+.new-members {
+  grid-area: new-members;
+}
+
+.recent-activity {
+  grid-area: recent-activity;
+}
+
+.message-user {
+  grid-area: message-user;
+}
+
+.settings {
+  grid-area: settings;
 }
 
 /*# sourceMappingURL=styles.css.map */

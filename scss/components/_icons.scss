@@ -18,3 +18,7 @@
     width: 32px;
   }
 }
+
+.icon-notification:hover path {
+  fill: map-get($theme-secondary, 1);
+}

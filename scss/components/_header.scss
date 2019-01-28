@@ -10,20 +10,21 @@
   @media (max-width: 320px) {
     padding: .25em;
   }
-  & ul {
-    @media (max-width: 320px) {
-      margin: 0 .25em;
-    }
-  }
 }
 
 .header a {
   color: #fff;
 }
 
-.header-nav ul {
+.header-nav > ul {
   @include flexy($disp: flex, $just: flex-end, $align-items: center);
   padding: 0;
+  @media (max-width: 320px) {
+    margin: 0 .25em;
+  }
+  & > li > a {
+    @include flexy($disp: flex, $align-items: center);
+  }
 }
 
 .logo {
@@ -33,21 +34,16 @@
 .user-nav {
   border-left: 1px solid map-get($theme-primary, 2);
   padding: .5em 0 .5em 1em;
-  font-size: .85em;
+  font-size: 1em;
   @media (max-width: 320px) {
     padding-left: .5em;
-    font-size: .75em;
-  }
-  @media (min-width: 375px) {
-    font-size: 1em;
   }
   & span {
     padding-left: .5em;
+    @media (max-width: 375px) {
+      display: none;
+    }
   }
-}
-
-.header-nav li a {
-  @include flexy($disp: flex, $align-items: center);
 }
 
 .notification-link {
@@ -59,6 +55,27 @@
   position: relative;
   @media (max-width: 320px) {
     padding-right: 0;
+  }
+}
+
+.notification-list {
+  position: absolute;
+  right: 1em;
+  background-color: map-get($theme-tertiary, 4);
+  margin: 0;
+  width: 200px;
+  display: none; // grid when visible
+  grid-gap: 2px;
+  border: 2px solid map-get($theme-tertiary, 4);
+  & li {
+    padding-left: .5em;
+    color: map-get($theme-primary, 1);
+    background-color: #fff;
+    @include flexy($disp: flex, $just: space-between, $align-items: center);
+  }
+  & a {
+    color: map-get($theme-primary, 1);
+    padding: .5em;
   }
 }
 

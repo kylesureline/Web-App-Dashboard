@@ -28,7 +28,8 @@ h2 {
 
 h3 {
   text-transform: uppercase;
-  color: map-get($theme-tertiary, 3);
+  color: map-get($theme-tertiary, 1);
+  font-size: 1em;
 }
 
 ul {

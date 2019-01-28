@@ -28,6 +28,11 @@
                 </svg>
                 <span class="notification-indicator">.</span>
               </a>
+              <ul class="notification-list">
+                <li><span>Notification item</span> <a href="#">&times;</a></li>
+                <li><span>Notification item</span> <a href="#">&times;</a></li>
+                <li><span>Notification item</span> <a href="#">&times;</a></li>
+              </ul>
             </li>
             <li class="user-nav">
               <a href="#">
@@ -83,7 +88,10 @@
       <main class="main">
         <div class="content-header">
           <h2>Dashboard</h2>
-          <input type="text" placeholder="Search">
+          <p class="alert"><span class="bold">Alert</span> Bacon ipsum dolor amet spare ribs pig cupim tongue prosciutto buffalo boudin beef ribs kielbasa brisket bacon. Pig meatloaf strip steak burgdoggenl. <a href="">&times;</a></p>
+          <div class="search-bar">
+            <input class="main-search" type="text" placeholder="Search">
+          </div>
         </div>
 
         <div class="traffic">
@@ -112,10 +120,29 @@
 
         <div class="message-user">
           <h3>Message User</h3>
+          <form>
+            <input type="text" id="user-search" placeholder="Search for User" />
+            <textarea id="user-message" placeholder="Message for User"></textarea>
+          </form>
         </div>
 
         <div class="settings">
           <h3>Settings</h3>
+          <form>
+            <legend>Send Email Notifications</legend>
+            <label class="switch" for="email-notifications">
+              <input id="email-notifications" type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <legend>Set Profile to Public</legend>
+            <label class="switch" for="profile-public">
+              <input id="profile-public" type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <select id="time-zone">
+              <option value="" disabled selected>Select Timezone</option>
+            </select>
+          </form>
         </div>
       </main>
 

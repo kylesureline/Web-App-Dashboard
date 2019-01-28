@@ -2,42 +2,6 @@
 //  Grid
 // ======================================
 
-.content-header {
-  grid-area: content-header;
-}
-
-.traffic {
-  grid-area: traffic;
-}
-
-.daily-traffic {
-  grid-area: daily-traffic;
-}
-
-.mobile-users {
-  grid-area: mobile-users;
-}
-
-.social-stats {
-  grid-area: social-stats;
-}
-
-.new-members {
-  grid-area: new-members;
-}
-
-.recent-activity {
-  grid-area: recent-activity;
-}
-
-.message-user {
-  grid-area: message-user;
-}
-
-.settings {
-  grid-area: settings;
-}
-
 .container {
   display: grid;
   grid-template-columns: 48px auto;
@@ -90,4 +54,44 @@
       "new-members    recent-activity recent-activity"
       "message-user   settings        ...";
   }
+}
+
+.main > div {
+  padding: .5em;
+}
+
+.content-header {
+  grid-area: content-header;
+}
+
+.traffic {
+  grid-area: traffic;
+}
+
+.daily-traffic {
+  grid-area: daily-traffic;
+}
+
+.mobile-users {
+  grid-area: mobile-users;
+}
+
+.social-stats {
+  grid-area: social-stats;
+}
+
+.new-members {
+  grid-area: new-members;
+}
+
+.recent-activity {
+  grid-area: recent-activity;
+}
+
+.message-user {
+  grid-area: message-user;
+}
+
+.settings {
+  grid-area: settings;
 }
