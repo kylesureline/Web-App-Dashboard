@@ -22,7 +22,7 @@
   @media (max-width: 320px) {
     margin: 0 .25em;
   }
-  & > li > a {
+  & > li {
     @include flexy($disp: flex, $align-items: center);
   }
 }
@@ -32,6 +32,7 @@
 }
 
 .user-nav {
+  cursor: pointer;
   border-left: 1px solid map-get($theme-primary, 2);
   padding: .5em 0 .5em 1em;
   font-size: 1em;
@@ -73,13 +74,14 @@
     background-color: #fff;
     @include flexy($disp: flex, $just: space-between, $align-items: center);
   }
-  & a {
+  & .close {
     color: map-get($theme-primary, 1);
     padding: .5em;
   }
 }
 
 .notification-indicator {
+  display: none; // hidden by default, display inherit or inline to show
   font-size: 48px;
   color: map-get($theme-secondary, 2);
   position: absolute;

@@ -402,7 +402,7 @@ ul {
     margin: 0 0.25em;
   }
 }
-.header-nav > ul > li > a {
+.header-nav > ul > li {
   display: flex;
   align-items: center;
 }
@@ -412,6 +412,7 @@ ul {
 }
 
 .user-nav {
+  cursor: pointer;
   border-left: 1px solid #5257b7;
   padding: 0.5em 0 0.5em 1em;
   font-size: 1em;
@@ -462,12 +463,13 @@ ul {
   justify-content: space-between;
   align-items: center;
 }
-.notification-list a {
+.notification-list .close {
   color: #444367;
   padding: 0.5em;
 }
 
 .notification-indicator {
+  display: none;
   font-size: 48px;
   color: #73c96e;
   position: absolute;
@@ -626,6 +628,12 @@ select {
   transition: 0.4s;
 }
 
+.settings form {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+}
+
 .light {
   font-weight: lighter;
 }
@@ -648,11 +656,11 @@ select {
 .alert span {
   padding-right: 0.5em;
 }
-.alert a {
-  color: inherit;
+.alert .close {
   font-size: 1.5em;
   margin-left: auto;
   padding: 0.25em 0.5em;
+  cursor: pointer;
 }
 
 .container {

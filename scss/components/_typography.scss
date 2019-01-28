@@ -21,10 +21,10 @@
   & span {
     padding-right: .5em;
   }
-  & a {
-    color: inherit;
+  & .close {
     font-size: 1.5em;
     margin-left: auto;
     padding: .25em .5em;
+    cursor: pointer;
   }
 }
