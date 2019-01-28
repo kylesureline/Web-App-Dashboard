@@ -40,7 +40,7 @@ select {
 .switch {
   position: relative;
   display: inline-block;
-  width: 72px;
+  width: 84px;
   height: 34px;
   & input {
     opacity: 0;
@@ -48,8 +48,16 @@ select {
     height: 0;
     &:checked + .slider {
       background-color: map-get($theme-primary, 3);
+      .on {
+        // display: inline-block;
+        opacity: 1;
+      }
+      .off {
+        // display: none;
+        opacity: 0;
+      }
       &:before {
-        transform: translateX(38px);
+        transform: translateX(50px);
       }
     }
     // &:focus + .slider {
@@ -65,7 +73,8 @@ select {
     right: 0;
     bottom: 0;
     background-color: map-get($theme-tertiary, 4);
-    transition: .4s;
+    // transition: .4s;
+    @include flexy($disp: flex, $just: space-between, $align-items: center);
     &:before {
       border-radius: 50%;
       position: absolute;
@@ -76,6 +85,21 @@ select {
       bottom: 4px;
       background-color: white;
       transition: .4s;
+      transition-property: transform;
+    }
+    .on,
+    .off {
+      user-select: none;
+      padding: 0 .5em;
+      color: #fff;
+    }
+    .on {
+      // display: none;
+      opacity: 0;
+    }
+    .off {
+      // display: inline-block;
+      opacity: 1;
     }
   }
 }
@@ -84,4 +108,8 @@ select {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 4px;
+  .switch-label {
+    margin: auto 0;
+  }
 }

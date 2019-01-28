@@ -600,7 +600,7 @@ select {
 .switch {
   position: relative;
   display: inline-block;
-  width: 72px;
+  width: 84px;
   height: 34px;
 }
 .switch input {
@@ -611,8 +611,14 @@ select {
 .switch input:checked + .slider {
   background-color: #686cb7;
 }
+.switch input:checked + .slider .on {
+  opacity: 1;
+}
+.switch input:checked + .slider .off {
+  opacity: 0;
+}
 .switch input:checked + .slider:before {
-  transform: translateX(38px);
+  transform: translateX(50px);
 }
 .switch .slider {
   border-radius: 34px;
@@ -623,7 +629,9 @@ select {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .switch .slider:before {
   border-radius: 50%;
@@ -635,12 +643,29 @@ select {
   bottom: 4px;
   background-color: white;
   transition: 0.4s;
+  transition-property: transform;
+}
+.switch .slider .on,
+.switch .slider .off {
+  user-select: none;
+  padding: 0 0.5em;
+  color: #fff;
+}
+.switch .slider .on {
+  opacity: 0;
+}
+.switch .slider .off {
+  opacity: 1;
 }
 
 .settings form {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 4px;
+}
+.settings form .switch-label {
+  margin: auto 0;
 }
 
 .light {
