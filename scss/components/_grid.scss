@@ -21,6 +21,8 @@
 }
 
 .main {
+  background-color: map-get($theme-tertiary, 4);
+  grid-gap: 1px;
   grid-area: main;
   display: grid;
   grid-template-rows: auto;
@@ -58,6 +60,8 @@
 
 .main > div {
   padding: .5em;
+  background-color: #fff;
+  @include flexy($disp: flex, $dir: column, $just: space-between);
 }
 
 .content-header {

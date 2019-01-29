@@ -5,12 +5,44 @@ form {
 input,
 textarea,
 select {
-  // display: block;
   border: 1px solid map-get($theme-tertiary, 4);
   border-radius: 4px;
   padding: .5em;
   width: 100%;
   outline: 0;
+  font-size: .9em;
+}
+
+input[type="text"],
+textarea {
+  padding: .75em;
+}
+
+.message-user .btn-confirm {
+  width: 100%;
+}
+
+.btn-confirm {
+  background-color: map-get($theme-primary, 3);
+}
+
+.btn-cancel {
+  background-color: map-get($theme-tertiary, 4);
+}
+
+.btn-confirm, .btn-cancel {
+  border-radius: 4px;
+  color: #fff;
+  padding: 1em;
+  text-transform: uppercase;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+.btn-confirm:active,
+.btn-cancel:active {
+  opacity: .7;
 }
 
 .search-bar {
@@ -25,9 +57,9 @@ select {
   }
   button {
     position: absolute;
-    top: 7px;
+    top: 10px;
     right: 2px;
-    background-color: none;
+    background-color: rgba(0, 0, 0, 0);
     border: none;
     outline: 0;
     cursor: pointer;
@@ -49,20 +81,15 @@ select {
     &:checked + .slider {
       background-color: map-get($theme-primary, 3);
       .on {
-        // display: inline-block;
         opacity: 1;
       }
       .off {
-        // display: none;
         opacity: 0;
       }
       &:before {
         transform: translateX(50px);
       }
     }
-    // &:focus + .slider {
-    //   box-shadow: 0 0 1px map-get($theme-primary, 3);
-    // }
   }
   & .slider {
     border-radius: 34px;
@@ -73,7 +100,8 @@ select {
     right: 0;
     bottom: 0;
     background-color: map-get($theme-tertiary, 4);
-    // transition: .4s;
+    transition: .4s;
+    transition-property: background-color;
     @include flexy($disp: flex, $just: space-between, $align-items: center);
     &:before {
       border-radius: 50%;
@@ -94,23 +122,38 @@ select {
       color: #fff;
     }
     .on {
-      // display: none;
       opacity: 0;
     }
     .off {
-      // display: inline-block;
       opacity: 1;
     }
   }
 }
 
-.settings form {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 4px;
-  .switch-label {
-    margin: auto 0;
+.message-user {
+  input,
+  textarea {
+    margin-bottom: 1em;
+    background-color: map-get($theme-tertiary, 5);
+    color: map-get($theme-tertiary, 1);
+    &::placeholder {
+      color: map-get($theme-tertiary, 4);
+    }
+  }
+  textarea {
+    height: 120px;
+  }
+}
+
+.settings {
+  & form {
+    // @include flexy($disp: flex, $dir: column, $just: space-between);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4px;
+    .switch-label {
+      margin: auto 0;
+    }
   }
 }
 

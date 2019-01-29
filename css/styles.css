@@ -573,6 +573,39 @@ select {
   padding: 0.5em;
   width: 100%;
   outline: 0;
+  font-size: 0.9em;
+}
+
+input[type=text],
+textarea {
+  padding: 0.75em;
+}
+
+.message-user .btn-confirm {
+  width: 100%;
+}
+
+.btn-confirm {
+  background-color: #686cb7;
+}
+
+.btn-cancel {
+  background-color: #ccc;
+}
+
+.btn-confirm, .btn-cancel {
+  border-radius: 4px;
+  color: #fff;
+  padding: 1em;
+  text-transform: uppercase;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+.btn-confirm:active,
+.btn-cancel:active {
+  opacity: 0.7;
 }
 
 .search-bar {
@@ -586,9 +619,9 @@ select {
 }
 .search-bar button {
   position: absolute;
-  top: 7px;
+  top: 10px;
   right: 2px;
-  background-color: none;
+  background-color: rgba(0, 0, 0, 0);
   border: none;
   outline: 0;
   cursor: pointer;
@@ -629,6 +662,8 @@ select {
   right: 0;
   bottom: 0;
   background-color: #ccc;
+  transition: 0.4s;
+  transition-property: background-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -658,9 +693,22 @@ select {
   opacity: 1;
 }
 
+.message-user input,
+.message-user textarea {
+  margin-bottom: 1em;
+  background-color: #fafafa;
+  color: #5c5b5b;
+}
+.message-user input::placeholder,
+.message-user textarea::placeholder {
+  color: #ccc;
+}
+.message-user textarea {
+  height: 120px;
+}
+
 .settings form {
   display: grid;
-  grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
   grid-gap: 4px;
 }
@@ -725,6 +773,8 @@ select {
 }
 
 .main {
+  background-color: #ccc;
+  grid-gap: 1px;
   grid-area: main;
   display: grid;
   grid-template-rows: auto;
@@ -746,6 +796,10 @@ select {
 
 .main > div {
   padding: 0.5em;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .content-header {

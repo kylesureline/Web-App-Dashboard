@@ -128,31 +128,34 @@
           <form>
             <input type="text" id="user-search" placeholder="Search for User" />
             <textarea id="user-message" placeholder="Message for User"></textarea>
+            <button class="btn-confirm" type="submit">Send</button>
           </form>
         </div>
 
         <div class="settings">
           <h3>Settings</h3>
           <form>
-            <label class="switch-label" for="email-notifications">Send Email Notifications</label>
-            <label class="switch">
-              <input id="email-notifications" type="checkbox">
-              <span class="slider">
-                <span class="on">ON</span>
-                <span class="off">OFF</span>
-              </span>
-            </label>
-            <label class="switch-label" for="profile-public">Set Profile to Public</label>
-            <label class="switch">
-              <input id="profile-public" type="checkbox">
-              <span class="slider">
-                <span class="on">ON</span>
-                <span class="off">OFF</span>
-              </span>
-            </label>
-            <select id="time-zone">
-              <option value="" disabled selected>Select Timezone</option>
-            </select>
+              <label class="switch-label" for="email-notifications">Send Email Notifications</label>
+              <label class="switch">
+                <input id="email-notifications" type="checkbox">
+                <span class="slider">
+                  <span class="on">ON</span>
+                  <span class="off">OFF</span>
+                </span>
+              </label>
+              <label class="switch-label" for="profile-public">Set Profile to Public</label>
+              <label class="switch">
+                <input id="profile-public" type="checkbox">
+                <span class="slider">
+                  <span class="on">ON</span>
+                  <span class="off">OFF</span>
+                </span>
+              </label>
+              <select id="time-zone">
+                <option value="" disabled selected>Select Timezone</option>
+              </select>
+              <button class="btn-confirm" type="submit">Save</button>
+              <button class="btn-cancel" type="button">Cancel</button>
           </form>
         </div>
       </main>
