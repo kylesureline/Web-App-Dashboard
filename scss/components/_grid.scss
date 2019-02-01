@@ -98,6 +98,42 @@
   grid-area: recent-activity;
 }
 
+.new-members ul,
+.recent-activity ul {
+  background-color: map-get($theme-tertiary, 4);
+  display: grid;
+  grid-gap: 1px;
+  li {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 50px auto 100px;
+    grid-template-areas:
+      "profile-pic  user   date"
+      "profile-pic  email  date";
+  }
+}
+
+.profile-pic,
+.date {
+  margin: auto;
+}
+
+.profile-pic {
+  grid-area: profile-pic;
+}
+
+.user {
+  grid-area: user;
+}
+
+.email {
+  grid-area: email;
+}
+
+.date {
+  grid-area: date;
+}
+
 .message-user {
   grid-area: message-user;
 }
