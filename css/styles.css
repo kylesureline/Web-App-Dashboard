@@ -633,6 +633,7 @@ textarea {
 .switch {
   position: relative;
   display: inline-block;
+  margin: auto 0;
   width: 84px;
   height: 34px;
 }
@@ -708,17 +709,19 @@ textarea {
 }
 
 .settings form {
+  height: calc(100% - 50px);
   display: grid;
+  grid-gap: 0.5em;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 4px;
+  grid-template-rows: repeat(3, auto) 50px;
 }
 .settings form .switch-label {
   margin: auto 0;
 }
-
-#time-zone {
+.settings form #time-zone {
   grid-column-start: 1;
   grid-column-end: -1;
+  margin: 1em 0;
 }
 
 .light {
@@ -790,16 +793,13 @@ textarea {
 @media (min-width: 1024px) {
   .main {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "content-header content-header  content-header" "traffic        traffic         daily-traffic" "social-stats   social-stats    mobile-users" "new-members    recent-activity recent-activity" "message-user   settings        ...";
+    grid-template-areas: "content-header content-header  content-header" "traffic        traffic         daily-traffic" "social-stats   social-stats    mobile-users" "new-members    recent-activity recent-activity" "message-user   message-user    settings";
   }
 }
 
 .main > div {
   padding: 0.5em;
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .content-header {

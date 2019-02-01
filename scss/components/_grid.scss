@@ -54,18 +54,24 @@
       "traffic        traffic         daily-traffic"
       "social-stats   social-stats    mobile-users"
       "new-members    recent-activity recent-activity"
-      "message-user   settings        ...";
+      "message-user   message-user    settings";
   }
 }
 
 .main > div {
   padding: .5em;
   background-color: #fff;
-  @include flexy($disp: flex, $dir: column, $just: space-between);
+  // @include flexy($disp: flex, $dir: column, $just: space-between);
 }
 
 .content-header {
   grid-area: content-header;
+  // display: grid;
+  // grid-template-columns: 1fr 2fr;
+  // .alert {
+  //   grid-column-start: 1;
+  //   grid-column-end: -1;
+  // }
 }
 
 .traffic {

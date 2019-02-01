@@ -72,6 +72,7 @@ textarea {
 .switch {
   position: relative;
   display: inline-block;
+  margin: auto 0;
   width: 84px;
   height: 34px;
   & input {
@@ -147,17 +148,18 @@ textarea {
 
 .settings {
   & form {
-    // @include flexy($disp: flex, $dir: column, $just: space-between);
+    height: calc(100% - 50px);
     display: grid;
+    grid-gap: .5em;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 4px;
+    grid-template-rows: repeat(3, auto) 50px;
     .switch-label {
       margin: auto 0;
     }
+    #time-zone {
+      grid-column-start: 1;
+      grid-column-end: -1;
+      margin: 1em 0;
+    }
   }
-}
-
-#time-zone {
-  grid-column-start: 1;
-  grid-column-end: -1;
 }
