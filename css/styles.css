@@ -566,7 +566,8 @@ ul {
   border-radius: 50%;
 }
 
-.icon-arrow-right {
+.icon-arrow-right,
+.icon-arrow-down {
   fill: #686cb7;
 }
 
@@ -576,6 +577,12 @@ ul {
 
 form {
   color: #5c5b5b;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 input,
@@ -635,11 +642,6 @@ textarea {
 .search-bar {
   position: relative;
 }
-.search-bar fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
 @media (min-width: 768px) {
   .search-bar fieldset {
     width: 50%;
@@ -652,11 +654,11 @@ textarea {
     padding-right: 1.5em;
   }
 }
+.search-bar input {
+  padding-right: 2.5em;
+}
 .search-bar input::placeholder {
   color: #ccc;
-}
-.search-bar input:focus + button {
-  display: none;
 }
 .search-bar button {
   position: absolute;
@@ -782,6 +784,16 @@ textarea {
   grid-column-start: 1;
   grid-column-end: -1;
   margin: 1em 0;
+}
+.settings form fieldset {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  position: relative;
+}
+.settings form .icon-arrow-down {
+  position: absolute;
+  top: 19px;
+  right: 2px;
 }
 
 .light {

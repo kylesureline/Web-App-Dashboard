@@ -2,6 +2,12 @@ form {
   color: map-get($theme-tertiary, 1);
 }
 
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
 input,
 textarea,
 select {
@@ -57,9 +63,6 @@ textarea {
 .search-bar {
   position: relative;
   fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
     @media (min-width: 768px) {
       width: 50%;
       max-width: 450px;
@@ -70,11 +73,9 @@ textarea {
     }
   }
   input {
+    padding-right: 2.5em;
     &::placeholder {
       color: map-get($theme-tertiary, 4);
-    }
-    &:focus + button {
-      display: none;
     }
   }
   button {
@@ -195,6 +196,16 @@ textarea {
       grid-column-start: 1;
       grid-column-end: -1;
       margin: 1em 0;
+    }
+    fieldset {
+      grid-column-start: 1;
+      grid-column-end: -1;
+      position: relative;
+    }
+    .icon-arrow-down {
+      position: absolute;
+      top: 19px;
+      right: 2px;
     }
   }
 }
