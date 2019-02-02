@@ -566,6 +566,14 @@ ul {
   border-radius: 50%;
 }
 
+.icon-arrow-right {
+  fill: #686cb7;
+}
+
+.arrow {
+  text-align: right;
+}
+
 form {
   color: #5c5b5b;
 }
@@ -758,11 +766,28 @@ textarea {
   cursor: pointer;
 }
 
+.new-members,
+.recent-activity {
+  font-size: 0.875em;
+}
+.new-members a,
+.recent-activity a {
+  color: #686cb7;
+}
+.new-members a:hover,
+.recent-activity a:hover {
+  opacity: 0.8;
+}
+
+.search {
+  grid-area: search;
+}
+
 .container {
   display: grid;
   grid-template-columns: 48px auto;
   grid-template-rows: auto;
-  grid-template-areas: "header header" "aside main";
+  grid-template-areas: "header header" "aside search" "aside main";
 }
 @media (min-width: 375px) {
   .container {
@@ -787,22 +812,23 @@ textarea {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 1fr;
-  grid-template-areas: "content-header" "traffic" "daily-traffic" "mobile-users" "social-stats" "new-members" "recent-activity" "message-user" "settings";
+  grid-template-areas: "traffic" "daily-traffic" "mobile-users" "social-stats" "new-members" "recent-activity" "message-user" "settings";
 }
 @media (min-width: 768px) {
   .main {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "content-header content-header" "traffic        traffic" "daily-traffic  mobile-users" "social-stats   social-stats" "new-members    recent-activity" "message-user   settings";
+    grid-template-areas: "traffic        traffic" "daily-traffic  mobile-users" "social-stats   social-stats" "new-members    recent-activity" "message-user   settings";
   }
 }
 @media (min-width: 1024px) {
   .main {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "content-header content-header  content-header" "traffic        traffic         daily-traffic" "social-stats   social-stats    mobile-users" "new-members    recent-activity recent-activity" "message-user   message-user    settings";
+    grid-template-areas: "traffic        traffic         daily-traffic" "social-stats   social-stats    mobile-users" "new-members    recent-activity recent-activity" "message-user   message-user    settings";
   }
 }
 
-.main > div {
+.main > div,
+.search {
   padding: 0.5em;
   background-color: #fff;
 }
@@ -845,8 +871,8 @@ textarea {
 .recent-activity ul li {
   background-color: #fff;
   display: grid;
-  grid-template-columns: 50px auto 100px;
-  grid-template-areas: "profile-pic  user   date" "profile-pic  email  date";
+  grid-template-columns: 50px auto 75px;
+  grid-template-areas: "left-column  middle-top     right-column" "left-column  middle-bottom  right-column";
 }
 
 .profile-pic,
@@ -854,20 +880,24 @@ textarea {
   margin: auto;
 }
 
-.profile-pic {
-  grid-area: profile-pic;
+.left-column {
+  grid-area: left-column;
 }
 
-.user {
-  grid-area: user;
+.user,
+.action {
+  grid-area: middle-top;
+  margin-bottom: 0;
 }
 
-.email {
-  grid-area: email;
+.email,
+.ago {
+  grid-area: middle-bottom;
+  margin-top: 0;
 }
 
-.date {
-  grid-area: date;
+.right-column {
+  grid-area: right-column;
 }
 
 .message-user {
