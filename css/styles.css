@@ -589,6 +589,12 @@ select {
   font-size: 0.9em;
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 input[type=text],
 textarea {
   padding: 0.75em;
