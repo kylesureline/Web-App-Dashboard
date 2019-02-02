@@ -597,6 +597,11 @@ textarea {
 .message-user .btn-confirm {
   width: 100%;
 }
+@media (min-width: 768px) {
+  .message-user .btn-confirm {
+    max-width: 300px;
+  }
+}
 
 .btn-confirm {
   background-color: #686cb7;
@@ -624,6 +629,23 @@ textarea {
 .search-bar {
   position: relative;
 }
+.search-bar fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .search-bar fieldset {
+    width: 50%;
+    max-width: 450px;
+    padding-right: 1em;
+  }
+}
+@media (min-width: 1024px) {
+  .search-bar fieldset {
+    padding-right: 1.5em;
+  }
+}
 .search-bar input::placeholder {
   color: #ccc;
 }
@@ -634,6 +656,7 @@ textarea {
   position: absolute;
   top: 10px;
   right: 2px;
+  float: right;
   background-color: rgba(0, 0, 0, 0);
   border: none;
   outline: 0;
@@ -641,6 +664,24 @@ textarea {
 }
 .search-bar button img {
   height: 20px;
+}
+@media (min-width: 768px) {
+  .search-bar button {
+    top: 21px;
+    right: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  .search-bar button {
+    right: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .search-bar {
+    background-color: #fafafa;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+  }
 }
 
 .switch {
@@ -724,7 +765,7 @@ textarea {
 .settings form {
   height: calc(100% - 50px);
   display: grid;
-  grid-gap: 0.5em;
+  grid-gap: 1em;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, auto) 50px;
 }
@@ -752,6 +793,8 @@ textarea {
   padding: 1em 1.5em;
   font-size: 0.85em;
   line-height: 1.5;
+  grid-column-start: 1;
+  grid-column-end: -1;
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
@@ -765,17 +808,35 @@ textarea {
   padding: 0.25em 0.5em;
   cursor: pointer;
 }
+@media (min-width: 768px) {
+  .alert {
+    margin-right: 1em;
+  }
+}
+@media (min-width: 1024px) {
+  .alert {
+    margin-right: 1.5em;
+  }
+}
 
 .new-members,
 .recent-activity {
   font-size: 0.875em;
 }
-.new-members a,
-.recent-activity a {
+.new-members .member a,
+.recent-activity .member a {
   color: #686cb7;
 }
-.new-members a:hover,
-.recent-activity a:hover {
+.new-members .member a:hover,
+.recent-activity .member a:hover {
+  opacity: 0.8;
+}
+.new-members .activity,
+.recent-activity .activity {
+  color: inherit;
+}
+.new-members .activity:hover,
+.recent-activity .activity:hover {
   opacity: 0.8;
 }
 
@@ -832,9 +893,34 @@ textarea {
   padding: 0.5em;
   background-color: #fff;
 }
+@media (min-width: 768px) {
+  .main > div,
+.search {
+    padding: 1em;
+  }
+}
+@media (min-width: 1024px) {
+  .main > div,
+.search {
+    padding: 1.5em;
+  }
+}
 
-.content-header {
-  grid-area: content-header;
+@media (min-width: 768px) {
+  .search {
+    display: grid;
+    grid-template-columns: 175px auto;
+    padding-top: 0;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .search-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
 
 .traffic {
@@ -867,8 +953,10 @@ textarea {
   display: grid;
   grid-gap: 1px;
 }
-.new-members ul li,
-.recent-activity ul li {
+.new-members ul .member,
+.new-members ul .activity,
+.recent-activity ul .member,
+.recent-activity ul .activity {
   background-color: #fff;
   display: grid;
   grid-template-columns: 50px auto 75px;

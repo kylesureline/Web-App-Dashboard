@@ -38,8 +38,6 @@
               <img class="icon-user" src="images/member-2.jpg" alt="User profile picture" />
               <span>Josh Sullivan</span>
             </li>
-            <!-- <li class="user-nav"><img class="icon-user" src="images/member-2.jpg" alt="User profile picture" /></li>
-            <li>Josh Sullivan</li> -->
           </ul>
         </nav>
       </header>
@@ -86,10 +84,12 @@
       <div class="search">
         <h2>Dashboard</h2>
         <form class="search-bar">
-          <input class="main-search" type="text" placeholder="Search">
-          <button type="submit">
-            <img src="icons/icon-search.svg" alt=""/>
-          </button>
+          <fieldset>
+            <input class="main-search" type="text" placeholder="Search">
+            <button type="submit">
+              <img src="icons/icon-search.svg" alt=""/>
+            </button>
+          </fieldset>
         </form>
         <p class="alert">
           <span class="bold">Alert</span>
@@ -118,26 +118,26 @@
         <div class="new-members">
           <h3>New Members</h3>
           <ul>
-            <li>
-              <img class="left-column profile-pic" src="images/member-1.jpg" />
+            <li class="member">
+              <img class="left-column profile-pic" src="images/member-1.jpg" alt="" />
               <p class="user">Victoria Chambers</p>
               <p class="email"><a href="mailto:victoria.chambers@domain.com">victoria.chambers@domain.com</a></p>
               <p class="right-column date">2/1/19</p>
             </li>
-            <li>
-              <img class="left-column profile-pic" src="images/member-2.jpg" />
+            <li class="member">
+              <img class="left-column profile-pic" src="images/member-2.jpg" alt="" />
               <p class="user">Dale Byrd</p>
               <p class="email"><a href="mailto:dale.byrd@domain.com">dale.byrd@domain.com</a></p>
               <p class="right-column date">2/1/19</p>
             </li>
-            <li>
-              <img class="left-column profile-pic" src="images/member-3.jpg" />
+            <li class="member">
+              <img class="left-column profile-pic" src="images/member-3.jpg" alt="" />
               <p class="user">Dawn Wood</p>
               <p class="email"><a href="mailto:dawn.wood@domain.com">dawn.wood@domain.com</a></p>
               <p class="right-column date">2/1/19</p>
             </li>
-            <li>
-              <img class="left-column profile-pic" src="images/member-4.jpg" />
+            <li class="member">
+              <img class="left-column profile-pic" src="images/member-4.jpg" alt="" />
               <p class="user">Dan Oliver</p>
               <p class="email"><a href="mailto:dan.oliver@domain.com">dan.oliver@domain.com</a></p>
               <p class="right-column date">2/1/19</p>
@@ -149,44 +149,52 @@
           <h3>Recent Activity</h3>
           <ul>
             <li>
-              <img class="left-column profile-pic" src="images/member-1.jpg" />
-              <p class="action">Victoria Chambers commented on YourApp's SEO Tips</p>
-              <p class="ago">4 hours ago</p>
-              <p class="right-column arrow">
-                <svg class="icon-arrow-right" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                  <path d="M8.578 16.359l4.594-4.594-4.594-4.594 1.406-1.406 6 6-6 6z"/>
-                </svg>
-              </p>
+              <a class="activity" href="#">
+                <img class="left-column profile-pic" src="images/member-1.jpg" alt="" />
+                <p class="action">Victoria Chambers commented on YourApp's SEO Tips</p>
+                <p class="ago">4 hours ago</p>
+                <p class="right-column arrow">
+                  <svg class="icon-arrow-right" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <path d="M8.578 16.359l4.594-4.594-4.594-4.594 1.406-1.406 6 6-6 6z"/>
+                  </svg>
+                </p>
+              </a>
             </li>
             <li>
-              <img class="left-column profile-pic" src="images/member-2.jpg" />
-              <p class="action">Dale Byrd liked the post Facebook's Changes for 2020</p>
-              <p class="ago">5 hours ago</p>
-              <p class="right-column arrow">
-                <svg class="icon-arrow-right" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                  <path d="M8.578 16.359l4.594-4.594-4.594-4.594 1.406-1.406 6 6-6 6z"/>
-                </svg>
-              </p>
+              <a class="activity" href="#">
+                <img class="left-column profile-pic" src="images/member-2.jpg" alt="" />
+                <p class="action">Dale Byrd liked the post Facebook's Changes for 2020</p>
+                <p class="ago">5 hours ago</p>
+                <p class="right-column arrow">
+                  <svg class="icon-arrow-right" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <path d="M8.578 16.359l4.594-4.594-4.594-4.594 1.406-1.406 6 6-6 6z"/>
+                  </svg>
+                </p>
+              </a>
             </li>
             <li>
-              <img class="left-column profile-pic" src="images/member-3.jpg" />
-              <p class="action">Dawn Wood commented on Facebook's Changes for 2020</p>
-              <p class="ago">5 hours ago</p>
-              <p class="right-column arrow">
-                <svg class="icon-arrow-right" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                  <path d="M8.578 16.359l4.594-4.594-4.594-4.594 1.406-1.406 6 6-6 6z"/>
-                </svg>
-              </p>
+              <a class="activity" href="#">
+                <img class="left-column profile-pic" src="images/member-3.jpg" alt="" />
+                <p class="action">Dawn Wood commented on Facebook's Changes for 2020</p>
+                <p class="ago">5 hours ago</p>
+                <p class="right-column arrow">
+                  <svg class="icon-arrow-right" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <path d="M8.578 16.359l4.594-4.594-4.594-4.594 1.406-1.406 6 6-6 6z"/>
+                  </svg>
+                </p>
+              </a>
             </li>
             <li>
-              <img class="left-column profile-pic" src="images/member-4.jpg" />
-              <p class="action">Dan Oliver posted YourApp's SEO Tips</p>
-              <p class="ago">1 day ago</p>
-              <p class="right-column arrow">
-                <svg class="icon-arrow-right" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                  <path d="M8.578 16.359l4.594-4.594-4.594-4.594 1.406-1.406 6 6-6 6z"/>
-                </svg>
-              </p>
+              <a class="activity" href="#">
+                <img class="left-column profile-pic" src="images/member-4.jpg" alt="" />
+                <p class="action">Dan Oliver posted YourApp's SEO Tips</p>
+                <p class="ago">1 day ago</p>
+                <p class="right-column arrow">
+                  <svg class="icon-arrow-right" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <path d="M8.578 16.359l4.594-4.594-4.594-4.594 1.406-1.406 6 6-6 6z"/>
+                  </svg>
+                </p>
+              </a>
             </li>
           </ul>
         </div>

@@ -17,6 +17,8 @@
   padding: 1em 1.5em;
   font-size: .85em;
   line-height: 1.5;
+  grid-column-start: 1;
+  grid-column-end: -1;
   @include flexy($disp: flex, $align-items: baseline, $just: flex-start);
   & span {
     padding-right: .5em;
@@ -27,13 +29,27 @@
     padding: .25em .5em;
     cursor: pointer;
   }
+  @media (min-width: 768px) {
+    margin-right: 1em;
+  }
+  @media (min-width: 1024px) {
+    margin-right: 1.5em;
+  }
 }
 
 .new-members,
 .recent-activity {
   font-size: .875em;
-  a {
-    color: map-get($theme-primary, 3);
+  .member {
+    a {
+      color: map-get($theme-primary, 3);
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+  .activity {
+    color: inherit;
     &:hover {
       opacity: .8;
     }

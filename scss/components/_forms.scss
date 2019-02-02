@@ -20,6 +20,9 @@ textarea {
 
 .message-user .btn-confirm {
   width: 100%;
+  @media (min-width: 768px) {
+    max-width: 300px;
+  }
 }
 
 .btn-confirm {
@@ -47,6 +50,19 @@ textarea {
 
 .search-bar {
   position: relative;
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    @media (min-width: 768px) {
+      width: 50%;
+      max-width: 450px;
+      padding-right: 1em;
+    }
+    @media (min-width: 1024px) {
+      padding-right: 1.5em;
+    }
+  }
   input {
     &::placeholder {
       color: map-get($theme-tertiary, 4);
@@ -59,6 +75,7 @@ textarea {
     position: absolute;
     top: 10px;
     right: 2px;
+    float: right;
     background-color: rgba(0, 0, 0, 0);
     border: none;
     outline: 0;
@@ -66,6 +83,18 @@ textarea {
     img {
       height: 20px;
     }
+    @media (min-width: 768px) {
+      top: 21px;
+      right: 16px;
+    }
+    @media (min-width: 1024px) {
+      right: 24px;
+    }
+  }
+  @media (min-width: 768px) {
+    background-color: map-get($theme-tertiary, 5);
+    border-bottom: 1px solid map-get($theme-tertiary, 4);
+    border-left: 1px solid map-get($theme-tertiary, 4);
   }
 }
 
@@ -150,7 +179,7 @@ textarea {
   & form {
     height: calc(100% - 50px);
     display: grid;
-    grid-gap: .5em;
+    grid-gap: 1em;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, auto) 50px;
     .switch-label {
