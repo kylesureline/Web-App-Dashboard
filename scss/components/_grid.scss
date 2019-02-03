@@ -101,6 +101,44 @@
 
 .social-stats {
   grid-area: social-stats;
+  display: grid;
+  grid-gap: .5em;
+  h3 {
+    @include fullWidthGridItem;
+  }
+  .network {
+    padding: .5em;
+    border: 1px solid map-get($theme-tertiary, 4);
+    border-radius: 4px;
+    background-color: map-get($theme-tertiary, 5);
+    display: grid;
+    grid-template-columns: 60px auto;
+    grid-template-areas:
+      "icon name"
+      "icon stats";
+    @media (min-width: 1024px) {
+      padding: 1em;
+    }
+  }
+  h4 {
+    grid-area: name;
+    color: map-get($theme-primary, 3);
+  //   font-weight: bolder;
+    font-size: 1em;
+    margin: auto 0 0 8px;
+  }
+  .icon-bg {
+    grid-area: icon;
+  }
+  .stats {
+    grid-area: stats;
+    font-size: 2em;
+    color: map-get($theme-tertiary, 2);
+    margin: 0 0 auto 8px;
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .new-members {
@@ -120,10 +158,11 @@
   .activity {
     background-color: #fff;
     display: grid;
-    grid-template-columns: 50px auto 75px;
+    grid-template-columns: 32px auto 60px;
     grid-template-areas:
       "left-column  middle-top     right-column"
       "left-column  middle-bottom  right-column";
+    grid-gap: 6px;
   }
 }
 

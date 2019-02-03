@@ -193,13 +193,11 @@ textarea {
       margin: auto 0;
     }
     #time-zone {
-      grid-column-start: 1;
-      grid-column-end: -1;
+      @include fullWidthGridItem;
       margin: 1em 0;
     }
     fieldset {
-      grid-column-start: 1;
-      grid-column-end: -1;
+      @include fullWidthGridItem;
       position: relative;
     }
     .icon-arrow-down {

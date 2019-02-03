@@ -562,7 +562,7 @@ ul {
 }
 
 .profile-pic {
-  width: 32px;
+  width: 100%;
   border-radius: 50%;
 }
 
@@ -573,6 +573,22 @@ ul {
 
 .arrow {
   text-align: right;
+}
+
+.icon-twitter,
+.icon-facebook,
+.icon-google-plus {
+  width: 50%;
+}
+
+.icon-bg {
+  background-color: #686cb7;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 form {
@@ -955,6 +971,46 @@ textarea {
 
 .social-stats {
   grid-area: social-stats;
+  display: grid;
+  grid-gap: 0.5em;
+}
+.social-stats h3 {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+.social-stats .network {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fafafa;
+  display: grid;
+  grid-template-columns: 60px auto;
+  grid-template-areas: "icon name" "icon stats";
+}
+@media (min-width: 1024px) {
+  .social-stats .network {
+    padding: 1em;
+  }
+}
+.social-stats h4 {
+  grid-area: name;
+  color: #686cb7;
+  font-size: 1em;
+  margin: auto 0 0 8px;
+}
+.social-stats .icon-bg {
+  grid-area: icon;
+}
+.social-stats .stats {
+  grid-area: stats;
+  font-size: 2em;
+  color: #848484;
+  margin: 0 0 auto 8px;
+}
+@media (min-width: 768px) {
+  .social-stats {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .new-members {
@@ -977,8 +1033,9 @@ textarea {
 .recent-activity ul .activity {
   background-color: #fff;
   display: grid;
-  grid-template-columns: 50px auto 75px;
+  grid-template-columns: 32px auto 60px;
   grid-template-areas: "left-column  middle-top     right-column" "left-column  middle-bottom  right-column";
+  grid-gap: 6px;
 }
 
 .profile-pic,

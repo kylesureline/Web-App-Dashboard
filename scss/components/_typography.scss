@@ -17,8 +17,7 @@
   padding: 1em 1.5em;
   font-size: .85em;
   line-height: 1.5;
-  grid-column-start: 1;
-  grid-column-end: -1;
+  @include fullWidthGridItem;
   @include flexy($disp: flex, $align-items: baseline, $just: flex-start);
   & span {
     padding-right: .5em;
