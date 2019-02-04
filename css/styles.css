@@ -959,15 +959,17 @@ textarea {
 
 .social-stats {
   grid-area: social-stats;
-  display: grid;
-  grid-gap: 0.5em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .social-stats h3 {
-  grid-column-start: 1;
-  grid-column-end: -1;
+  width: 100%;
 }
 .social-stats .network {
+  flex: 1 0 auto;
   padding: 0.5em;
+  margin: 0.5em;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #fafafa;
@@ -994,11 +996,6 @@ textarea {
   font-size: 2em;
   color: #848484;
   margin: 0 0 auto 8px;
-}
-@media (min-width: 768px) {
-  .social-stats {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 }
 
 .new-members {

@@ -92,13 +92,14 @@
 
 .social-stats {
   grid-area: social-stats;
-  display: grid;
-  grid-gap: .5em;
   h3 {
-    @include fullWidthGridItem;
+    width: 100%;
   }
+  @include flexy($disp: flex, $wrap: wrap, $just: space-evenly);
   .network {
+    flex: 1 0 auto;
     padding: .5em;
+    margin: .5em;
     border: 1px solid map-get($theme-tertiary, 4);
     border-radius: 4px;
     background-color: map-get($theme-tertiary, 5);
@@ -114,7 +115,6 @@
   h4 {
     grid-area: name;
     color: map-get($theme-primary, 3);
-  //   font-weight: bolder;
     font-size: 1em;
     margin: auto 0 0 8px;
   }
@@ -126,9 +126,6 @@
     font-size: 2em;
     color: map-get($theme-tertiary, 2);
     margin: 0 0 auto 8px;
-  }
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
