@@ -447,11 +447,13 @@ ul {
 
 .notification-list {
   position: absolute;
-  right: 1em;
   background-color: #ccc;
   margin: 0;
   width: 200px;
-  display: none;
+  top: 40px;
+  right: 16px;
+  z-index: 100;
+  display: grid;
   grid-gap: 2px;
   border: 2px solid #ccc;
 }
@@ -459,6 +461,7 @@ ul {
   padding-left: 0.5em;
   color: #444367;
   background-color: #fff;
+  font-size: 1.2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -466,10 +469,10 @@ ul {
 .notification-list .close {
   color: #444367;
   padding: 0.5em;
+  cursor: pointer;
 }
 
 .notification-indicator {
-  display: none;
   font-size: 48px;
   color: #73c96e;
   position: absolute;
