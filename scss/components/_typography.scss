@@ -16,6 +16,9 @@
   border-radius: 4px;
   padding: 1em 1.5em;
   font-size: .85em;
+  transition: 2s;
+  opacity: 1;
+  transition-property: opacity;
   line-height: 1.5;
   @include fullWidthGridItem;
   @include flexy($disp: flex, $align-items: baseline, $just: flex-start);

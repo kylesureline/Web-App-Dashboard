@@ -446,6 +446,9 @@ ul {
 }
 
 .notification-list {
+  transition: 1s;
+  opacity: 1;
+  transition-property: opacity;
   position: absolute;
   background-color: #ccc;
   margin: 0;
@@ -473,6 +476,9 @@ ul {
 }
 
 .notification-indicator {
+  transition: 0.5s;
+  transition-property: opacity;
+  opacity: 1;
   font-size: 48px;
   color: #73c96e;
   position: absolute;
@@ -829,6 +835,9 @@ textarea {
   border-radius: 4px;
   padding: 1em 1.5em;
   font-size: 0.85em;
+  transition: 2s;
+  opacity: 1;
+  transition-property: opacity;
   line-height: 1.5;
   grid-column-start: 1;
   grid-column-end: -1;
