@@ -6,6 +6,7 @@
   const alert = document.querySelector('.alert');
 
   function close(target) {
+
     const parent = target.parentElement;
     const grandparent = parent.parentElement;
     grandparent.removeChild(parent);
@@ -22,10 +23,11 @@
     }, 250);
   }
 
+
+  // demo alerts and notifications
   fadeIn(alert);
   fadeIn(notificationList);
   fadeIn(notificationIndicator);
-
 
   // event listeners
   for(let i = 0; i < closeItems.length; i++) {
