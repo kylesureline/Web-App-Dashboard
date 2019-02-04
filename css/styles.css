@@ -968,7 +968,7 @@ textarea {
 }
 .social-stats .network {
   flex: 1 0 auto;
-  padding: 0.5em;
+  padding: 1em;
   margin: 0.5em;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -977,9 +977,9 @@ textarea {
   grid-template-columns: 60px auto;
   grid-template-areas: "icon name" "icon stats";
 }
-@media (min-width: 1024px) {
+@media (max-width: 375px) {
   .social-stats .network {
-    padding: 1em;
+    padding: 0.5em;
   }
 }
 .social-stats h4 {
