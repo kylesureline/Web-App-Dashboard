@@ -60,9 +60,6 @@
 }
 
 .notification-list {
-  transition: 1s;
-  opacity: 1;
-  transition-property: opacity;
   position: absolute;
   background-color: map-get($theme-tertiary, 4);
   margin: 0;

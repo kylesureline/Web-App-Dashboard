@@ -446,9 +446,6 @@ ul {
 }
 
 .notification-list {
-  transition: 1s;
-  opacity: 1;
-  transition-property: opacity;
   position: absolute;
   background-color: #ccc;
   margin: 0;
@@ -793,6 +790,33 @@ textarea {
 .message-user textarea {
   height: 120px;
   margin-bottom: 1em;
+  position: relative;
+  display: inline-block;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-bottom: none;
+  z-index: 99;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.autocomplete-items div:hover {
+  background-color: #848484;
+  color: #fff;
+}
+
+.autocomplete-active {
+  background-color: #5c5b5b !important;
+  color: #fff;
 }
 
 .message-sent {

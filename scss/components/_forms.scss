@@ -180,7 +180,37 @@ textarea {
   textarea {
     height: 120px;
     margin-bottom: 1em;
+    position: relative;
+    display: inline-block;
   }
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid map-get($theme-tertiary, 4);
+  border-top: none;
+  border-bottom: none;
+  z-index: 99;
+  // top: 100%;
+  // left: 0;
+  // right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid map-get($theme-tertiary, 4);
+}
+
+.autocomplete-items div:hover {
+  background-color: map-get($theme-tertiary, 2);
+  color: #fff;
+}
+
+.autocomplete-active {
+  background-color: map-get($theme-tertiary, 1) !important;
+  color: #fff;
 }
 
 .message-sent {
