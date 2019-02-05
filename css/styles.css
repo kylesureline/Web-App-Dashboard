@@ -633,11 +633,11 @@ textarea {
 }
 
 .message-user .btn-confirm {
-  width: 100%;
+  width: 50%;
 }
 @media (min-width: 768px) {
   .message-user .btn-confirm {
-    max-width: 300px;
+    max-width: 200px;
   }
 }
 
@@ -783,7 +783,6 @@ textarea {
 
 .message-user input,
 .message-user textarea {
-  margin-bottom: 1em;
   background-color: #fafafa;
   color: #5c5b5b;
 }
@@ -793,6 +792,24 @@ textarea {
 }
 .message-user textarea {
   height: 120px;
+  margin-bottom: 1em;
+}
+
+.message-sent {
+  transition: 1s;
+  transition-property: opacity;
+  font-style: italic;
+  opacity: 1;
+  padding-left: 0.5em;
+  margin-left: auto;
+  color: #73c96e;
+}
+
+.user-error {
+  font-style: italic;
+  color: red;
+  transition-property: opacity;
+  transition: 0.5s;
 }
 
 .settings form {

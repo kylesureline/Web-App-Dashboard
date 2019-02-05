@@ -231,10 +231,14 @@
 
         <div class="message-user">
           <h3>Message User</h3>
-          <form>
-            <input type="text" id="user-search" placeholder="Search for User" />
+          <form id="message-user-form">
+            <fieldset>
+              <input type="text" id="user-search" placeholder="Search for User" autocomplete="off" />
+            </fieldset>
+            <span class="user-error" style="opacity:0;">Error</span>
             <textarea id="user-message" placeholder="Message for User"></textarea>
             <button class="btn-confirm" type="submit">Send</button>
+            <span class="message-sent" style="opacity:0;">Message Sent!</span>
           </form>
         </div>
 

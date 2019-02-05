@@ -31,9 +31,9 @@ textarea {
 }
 
 .message-user .btn-confirm {
-  width: 100%;
+  width: 50%;
   @media (min-width: 768px) {
-    max-width: 300px;
+    max-width: 200px;
   }
 }
 
@@ -170,7 +170,7 @@ textarea {
 .message-user {
   input,
   textarea {
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
     background-color: map-get($theme-tertiary, 5);
     color: map-get($theme-tertiary, 1);
     &::placeholder {
@@ -179,7 +179,25 @@ textarea {
   }
   textarea {
     height: 120px;
+    margin-bottom: 1em;
   }
+}
+
+.message-sent {
+  transition: 1s;
+  transition-property: opacity;
+  font-style: italic;
+  opacity: 1;
+  padding-left: .5em;
+  margin-left: auto;
+  color: map-get($theme-secondary, 2);
+}
+
+.user-error {
+  font-style: italic;
+  color: red;
+  transition-property: opacity;
+  transition: .5s;
 }
 
 .settings {
