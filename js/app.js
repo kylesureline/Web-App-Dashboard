@@ -4,12 +4,50 @@
   const notificationList = document.querySelector('.notification-list');
   const closeItems = document.querySelectorAll('.close');
   const alert = document.querySelector('.alert');
+  const settingsForm = document.querySelector('.settings form');
   const sendMessageForm = document.querySelector('#message-user-form');
     const userSearch = sendMessageForm.querySelector('input');
     const userMessage = sendMessageForm.querySelector('textarea');
     const messageSent = sendMessageForm.querySelector('.message-sent');
     const userError = sendMessageForm.querySelector('.user-error');
   const users = ['Robert Camp', 'Juanita Dam', 'Tom English', 'Lewis Davis', 'Timothy Davis', 'Helen Shelby', 'Carmela Collins', 'Patrick Boldt', 'Richard Stowe', 'Grace Bartlett', 'Rebecca Villaneuva', 'Denise Mattson', 'Kevin Vong', 'Brittany Jones', 'Gretchen Pickering', 'Lorene Shepherd', 'Kimberli Folkes', 'Darren Chiaramonte', 'Peggy Carroll', 'Edwin Savage', 'Ruby Agostini', 'Jimmy Renfro', 'Mike Clark', 'Hazel Arvidson', 'Becky Phillips', 'Adrianne Jankows', 'Roy Spradlin', 'Andrew Ginder', 'Sheila Delisle', 'Jeffrey Bell', 'Juan Hoyt', 'Lane Greene', 'Stacy Rogers', 'John Ma', 'Oliver Stark', 'Nickolas Ponz', 'Monique Gutierrez', 'Lori Li', 'Kelly Lee', 'Isaac Jackson', 'Hailey Watson', 'Friedrick Evanston', 'Evan Tam', 'David Livingston', 'Charles Lexington', 'Adam Franklin', 'Jerry Montgomery', 'Paul Watson', 'Jen Smith', 'Steve Johnson', 'Sally Swenson', 'Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver', 'Bob Smith', 'Josie Pluck', 'Jessica Gutierrez', 'Greg Johnson', 'Zach Lee'];
+  const Data = {
+    email: false,
+    public: false,
+    timezone: 'America/Los_Angeles'
+  };
+
+  function supportsLocalStorage() {
+    try {
+      return 'localStorage' in window && window['localStorage'] !== null;
+    } catch(e){
+      return false;
+    }
+  }
+
+  function save() {
+    if(supportsLocalStorage()) {
+      localStorage.setItem('WebAppDashboardData', JSON.stringify(Data));
+    }
+  }
+
+  function load() {
+    if(supportsLocalStorage()) {
+      if(localStorage.getItem('WebAppDashboardData') !== '') {
+        const d = JSON.parse(localStorage.getItem('WebAppDashboardData'));
+        for(p in d) {
+          Data[p] = d[p];
+        }
+        const checkboxes = settingsForm.querySelectorAll('input[type=checkbox]');
+        const email = checkboxes[0];
+        const public = checkboxes[1];
+        const timezone = settingsForm.querySelector('select');
+        email.checked = Data.email;
+        public.checked = Data.public;
+        timezone.value = Data.timezone;
+      }
+    }
+  }
 
   function close(target) {
     const parent = target.parentElement;
@@ -98,6 +136,9 @@
     });
   }
 
+  // load saved settings
+  load();
+
   // demo alerts and notifications
   fadeIn(alert);
   // fadeIn(notificationList);
@@ -126,11 +167,27 @@
   userSearch.addEventListener('keyup', (e) => {
     fadeOut(userError);
   });
+  userMessage.addEventListener('keyup', (e) => {
+    fadeOut(userError);
+  });
+
+  settingsForm.addEventListener('submit', (e)=> {
+    e.preventDefault();
+    const checkboxes = settingsForm.querySelectorAll('input[type=checkbox]');
+    const email = checkboxes[0].checked;
+    const public = checkboxes[1].checked;
+    const timezone = settingsForm.querySelector('select').value;
+    Data.email = email;
+    Data.public = public;
+    Data.timezone = timezone;
+
+    save();
+  });
 
   sendMessageForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    if(userSearch.value !== '') {
+    if(userSearch.value !== '' && userMessage.value !== '') {
       userSearch.value = '';
       userMessage.value = '';
 
@@ -139,7 +196,12 @@
         fadeOut(messageSent);
       }, 3000);
     } else {
-      userError.textContent = 'Enter a user, please.';
+      if(userSearch.value === '') {
+        userError.textContent = 'Add a user, please.';
+      } else if(userMessage.value === '') {
+        userError.textContent = 'Compose a message, please.';
+      }
+
       fadeIn(userError);
     }
   });
