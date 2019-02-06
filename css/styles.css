@@ -847,13 +847,11 @@ textarea {
   margin: auto 0;
 }
 .settings form #time-zone {
-  grid-column-start: 1;
-  grid-column-end: -1;
+  grid-column: 1/-1;
   margin: 1em 0;
 }
 .settings form fieldset {
-  grid-column-start: 1;
-  grid-column-end: -1;
+  grid-column: 1/-1;
   position: relative;
 }
 .settings form .icon-arrow-down {
@@ -880,8 +878,7 @@ textarea {
   opacity: 1;
   transition-property: opacity;
   line-height: 1.5;
-  grid-column-start: 1;
-  grid-column-end: -1;
+  grid-column: 1/-1;
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
