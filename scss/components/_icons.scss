@@ -40,11 +40,6 @@
 .icon-twitter,
 .icon-facebook,
 .icon-google-plus {
-  // width: 32px;
-  // position: absolute;
-  // top: 50%;
-  // left: 50%;
-  // margin: -16px 0 0 -16px;
   width: 50%;
 }
 
@@ -53,6 +48,5 @@
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  // position: relative;
   @include flexy($disp: flex, $just: center, $align-items: center);
 }

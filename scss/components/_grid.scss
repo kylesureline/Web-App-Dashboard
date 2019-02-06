@@ -92,12 +92,13 @@
 
 .social-stats {
   grid-area: social-stats;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: 44px repeat(auto-fill, 110px);
   h3 {
-    width: 100%;
+    @include fullWidthGridItem;
   }
-  @include flexy($disp: flex, $wrap: wrap, $just: space-evenly);
   .network {
-    flex: 1 0 auto;
     padding: 1em;
     margin: .5em;
     border: 1px solid map-get($theme-tertiary, 4);
