@@ -1,8 +1,13 @@
 // document.addEventListener('DOMContentLoaded', (e) => {
   const data = [0, 750, 1250, 1000, 1250, 2000, 1500, 1750, 2000, 2250, 2000, 2200];
+  // traffic buttons
+  const traffic_btns = document.querySelector('.traffic-intervals');
+  // contexts
+  const traffic_ctx = document.getElementById('traffic-chart').getContext('2d');
+  const daily_ctx = document.getElementById('daily-traffic-chart').getContext('2d');
+  const mobile_ctx = document.getElementById('mobile-users-chart').getContext('2d');
 
-  var ctxTraffic = document.getElementById("traffic-chart").getContext('2d');
-  var weeklyTrafficChart = new Chart(ctxTraffic, {
+  let weeklyTrafficChart = new Chart(traffic_ctx, {
     type: 'line',
     data: {
       labels: ["18-24", "25-1", "2-8", "9-15", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-2"],
@@ -26,16 +31,22 @@
         line: {
           tension: 0,
         }
-      },
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero:true
-          }
-        }]
       }
     }
   });
+
+  traffic_btns.addEventListener('click', (e)=> {
+    let target = e.target;
+    let listItems = traffic_btns.children;
+    if(!target.className.includes('selected')) {
+      for(let i = 0; i < listItems.length; i++) {
+        listItems[i].className = listItems[i].className.replace(' selected', '');
+      }
+      target.className += ' selected';
+      console.log(target.textContent.toLowerCase());
+    }
+  });
+
 
   // var dailyTrafficChart = document.getElementById("daily-traffic-chart").getContext('2d');
   // var myChart = new Chart(dailyTrafficChart, {
