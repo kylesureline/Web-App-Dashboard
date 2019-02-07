@@ -60,7 +60,7 @@
     },
     options: {
       responsive: true,
-      maintainAspectRatio: true,
+      // maintainAspectRatio: true,
       title: {
         display: false
       },
@@ -88,7 +88,7 @@
     },
     options: {
       responsive: true,
-      maintainAspectRatio: true,
+      // maintainAspectRatio: true,
       title: {
         display: false
       },
@@ -127,12 +127,12 @@
     },
     options: {
       responsive: true,
-      maintainAspectRatio: true,
+      // maintainAspectRatio: true,
       legend: {
         position: 'right',
         labels: {
           boxWidth: 20,
-          padding: 32,
+          padding: 24,
           fontSize: 16
         }
       },

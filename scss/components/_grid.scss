@@ -100,8 +100,8 @@
   @include flexy($disp: flex, $just: flex-end, $align-items: center);
   li {
     font-weight: bolder;
-    padding: .5em 1em;
     color: map-get($theme-tertiary, 2);
+    padding: .25em .5em;
     border-radius: 16px;
     display: inline-block;
     &:hover {
@@ -111,6 +111,12 @@
       background-color: map-get($theme-secondary, 2);
       color: #fff;
       cursor: default;
+    }
+    @media (min-width: 768px) {
+      padding: .5em 1em;
+    }
+    @media (max-width: 375px) {
+      font-size: .85em;
     }
   }
 }
@@ -130,8 +136,16 @@
 .traffic-chart,
 .daily-traffic-chart,
 .mobile-users-chart {
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
+}
+
+.daily-traffic {
+  @include flexy($disp: flex, $dir: column);
+}
+
+.daily-traffic-chart {
+  margin: auto;
 }
 
 .social-stats {

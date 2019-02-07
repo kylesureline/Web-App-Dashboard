@@ -63,9 +63,9 @@
   position: absolute;
   background-color: map-get($theme-tertiary, 4);
   margin: 0;
-  width: 200px;
+  width: 275px;
   top: 40px;
-  right: 16px;
+  right: -56px;
   z-index: 100;
   display: grid;
   grid-gap: 2px;
@@ -74,13 +74,19 @@
     padding-left: .5em;
     color: map-get($theme-primary, 1);
     background-color: #fff;
-    font-size: 1.2em;
+    font-size: 1em;
     @include flexy($disp: flex, $just: space-between, $align-items: center);
   }
   & .close {
     color: map-get($theme-primary, 1);
     padding: .5em;
     cursor: pointer;
+  }
+  @media (max-width: 375px) {
+    right: -40px;
+  }
+  @media (min-width: 768px) {
+    right: 16px;
   }
 }
 
