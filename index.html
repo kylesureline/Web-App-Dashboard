@@ -101,17 +101,29 @@
       <main class="main">
         <div class="traffic">
           <h3>Traffic</h3>
-          <!-- <canvas id="traffic-chart"></canvas> -->
+          <ul class="traffic-intervals">
+            <li class="hourly">Hourly</li>
+            <li class="daily">Daily</li>
+            <li class="weekly selected">Weekly</li>
+            <li class="monthly">Monthly</li>
+          </ul>
+          <div class="traffic-chart">
+            <canvas id="traffic-chart"></canvas>
+          </div>
         </div>
 
         <div class="daily-traffic">
           <h3>Daily Traffic</h3>
-          <!-- <canvas id="daily-traffic-chart"></canvas> -->
+          <div class="daily-traffic-chart">
+            <!-- <canvas id="daily-traffic-chart"></canvas> -->
+          </div>
         </div>
 
         <div class="mobile-users">
           <h3>Mobile Users</h3>
-          <!-- <canvas id="mobile-users-chart"></canvas> -->
+          <div class="mobile-users-chart">
+            <!-- <canvas id="mobile-users-chart"></canvas> -->
+          </div>
         </div>
 
         <div class="social-stats">
@@ -785,7 +797,7 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
-    <script src="js/app.js">
-    </script>
+    <script src="js/app.js"></script>
+    <script src="js/charts.js"></script>
   </body>
 </html>

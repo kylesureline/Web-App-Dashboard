@@ -87,6 +87,36 @@
 
 .traffic {
   grid-area: traffic;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50px auto;
+  h3 {
+    display: inline-block;
+  }
+}
+
+.traffic-intervals {
+  display: inline-block;
+  @include flexy($disp: flex, $just: flex-end, $align-items: center);
+  li {
+    font-weight: bolder;
+    padding: .5em 1em;
+    color: map-get($theme-tertiary, 2);
+    border-radius: 16px;
+    display: inline-block;
+    &:hover {
+      cursor: pointer;
+    }
+    &.selected {
+      background-color: map-get($theme-secondary, 2);
+      color: #fff;
+      cursor: default;
+    }
+  }
+}
+
+.traffic-chart {
+  grid-column: 1 / -1;
 }
 
 .daily-traffic {
@@ -95,6 +125,13 @@
 
 .mobile-users {
   grid-area: mobile-users;
+}
+
+.traffic-chart,
+.daily-traffic-chart,
+.mobile-users-chart {
+  width: 100%;
+  margin: 0 auto;
 }
 
 .social-stats {

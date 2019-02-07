@@ -1023,6 +1023,38 @@ textarea {
 
 .traffic {
   grid-area: traffic;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50px auto;
+}
+.traffic h3 {
+  display: inline-block;
+}
+
+.traffic-intervals {
+  display: inline-block;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.traffic-intervals li {
+  font-weight: bolder;
+  padding: 0.5em 1em;
+  color: #848484;
+  border-radius: 16px;
+  display: inline-block;
+}
+.traffic-intervals li:hover {
+  cursor: pointer;
+}
+.traffic-intervals li.selected {
+  background-color: #73c96e;
+  color: #fff;
+  cursor: default;
+}
+
+.traffic-chart {
+  grid-column: 1/-1;
 }
 
 .daily-traffic {
@@ -1031,6 +1063,13 @@ textarea {
 
 .mobile-users {
   grid-area: mobile-users;
+}
+
+.traffic-chart,
+.daily-traffic-chart,
+.mobile-users-chart {
+  width: 100%;
+  margin: 0 auto;
 }
 
 .social-stats {
