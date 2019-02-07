@@ -19,6 +19,10 @@
   }
 }
 
+.icon-notification {
+  padding-top: 4px;
+}
+
 .icon-notification:hover path {
   fill: map-get($theme-secondary, 1);
 }

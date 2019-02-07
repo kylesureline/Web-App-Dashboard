@@ -14,6 +14,13 @@
     "header header"
     "aside search"
     "aside main";
+  @media (max-width: 375px) {
+    grid-template-areas:
+      "header"
+      "aside"
+      "search"
+      "main";
+  }
 }
 
 .main {

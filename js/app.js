@@ -206,38 +206,39 @@
     }
   });
 
-  var ctxTraffic = document.getElementById("traffic-chart").getContext('2d');
-  var weeklyTrafficChart = new Chart(ctxTraffic, {
-    type: 'line',
-    data: {
-      labels: ["18-24", "25-1", "2-8", "9-15", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-2"],
-      datasets: [{
-        label: '',
-        data: [0, 750, 1250, 1000, 5, 2, 3],
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-        ],
-        borderColor: [
-          'rgba(255,99,132,1)',
-        ],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      elements: {
-        line: {
-          tension: 0,
-        }
-      },
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero:true
-          }
-        }]
-      }
-    }
-  });
+  // Chart.js charts
+  // var ctxTraffic = document.getElementById("traffic-chart").getContext('2d');
+  // var weeklyTrafficChart = new Chart(ctxTraffic, {
+  //   type: 'line',
+  //   data: {
+  //     labels: ["18-24", "25-1", "2-8", "9-15", "16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-2"],
+  //     datasets: [{
+  //       label: '',
+  //       data: [0, 750, 1250, 1000, 5, 2, 3],
+  //       backgroundColor: [
+  //         'rgba(255, 99, 132, 0.2)',
+  //       ],
+  //       borderColor: [
+  //         'rgba(255,99,132,1)',
+  //       ],
+  //       borderWidth: 1
+  //     }]
+  //   },
+  //   options: {
+  //     elements: {
+  //       line: {
+  //         tension: 0,
+  //       }
+  //     },
+  //     scales: {
+  //       yAxes: [{
+  //         ticks: {
+  //           beginAtZero:true
+  //         }
+  //       }]
+  //     }
+  //   }
+  // });
 
   // var dailyTrafficChart = document.getElementById("daily-traffic-chart").getContext('2d');
   // var myChart = new Chart(dailyTrafficChart, {

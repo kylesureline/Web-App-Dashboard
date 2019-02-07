@@ -381,7 +381,7 @@ ul {
   color: #fff;
   padding: 0.75em;
 }
-@media (max-width: 320px) {
+@media (max-width: 375px) {
   .header {
     padding: 0.25em;
   }
@@ -499,10 +499,25 @@ ul {
   text-align: center;
 }
 
+@media (max-width: 375px) {
+  .sidebar-nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .sidebar-nav ul li {
+    display: inline-block;
+  }
+}
 .sidebar-nav li a {
   padding: 0.75em 0;
   margin: 0.5em 0;
   display: block;
+}
+@media (max-width: 375px) {
+  .sidebar-nav li a {
+    padding-bottom: 0.5em;
+    margin-bottom: 0;
+  }
 }
 @media (min-width: 1024px) {
   .sidebar-nav li a {
@@ -515,9 +530,14 @@ ul {
 }
 
 .sidebar-nav .active {
+  border: 3px solid #444367;
   border-left: 3px solid #73c96e;
-  border-top: 3px solid #444367;
-  border-bottom: 3px solid #444367;
+}
+@media (max-width: 375px) {
+  .sidebar-nav .active {
+    border: 3px solid #444367;
+    border-bottom: 3px solid #73c96e;
+  }
 }
 
 .sidebar-nav a {
@@ -561,6 +581,10 @@ ul {
 .icon-settings {
     width: 32px;
   }
+}
+
+.icon-notification {
+  padding-top: 4px;
 }
 
 .icon-notification:hover path {
@@ -933,6 +957,11 @@ textarea {
   grid-template-columns: minmax(48px, auto) 1fr;
   grid-template-rows: auto;
   grid-template-areas: "header header" "aside search" "aside main";
+}
+@media (max-width: 375px) {
+  .container {
+    grid-template-areas: "header" "aside" "search" "main";
+  }
 }
 
 .main {
