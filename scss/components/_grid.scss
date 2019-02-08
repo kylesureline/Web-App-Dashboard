@@ -158,23 +158,29 @@
     grid-area: name;
     color: map-get($theme-primary, 3);
     font-size: 1em;
-    margin: auto 0 0 8px;
+    // margin: auto 0 0 8px;
+    margin: 0;
   }
   .icon-bg {
-    grid-area: icon;
-    margin: auto 0;
+    // grid-area: icon;
   }
   .stats {
-    grid-area: stats;
+    // grid-area: stats;
+    margin: 0;
     font-size: 2em;
     color: map-get($theme-tertiary, 2);
-    margin: 0 0 auto 8px;
+    // margin: 0 0 auto 8px;
   }
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
   }
+}
+
+.network-stats {
+  padding-left: 1em;
+  @include flexy($disp: flex, $dir: column, $just: center);
 }
 
 .network {
@@ -184,11 +190,7 @@
   border: 1px solid map-get($theme-tertiary, 4);
   border-radius: 4px;
   background-color: map-get($theme-tertiary, 5);
-  display: grid;
-  grid-template-columns: 60px auto;
-  grid-template-areas:
-    "icon name"
-    "icon stats";
+  @include flexy($disp: flex, $just: flex-start);
   @media (max-width: 320px) {
     padding: .5em;
   }

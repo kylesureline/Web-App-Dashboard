@@ -1114,17 +1114,12 @@ textarea {
   grid-area: name;
   color: #686cb7;
   font-size: 1em;
-  margin: auto 0 0 8px;
-}
-.social-stats .icon-bg {
-  grid-area: icon;
-  margin: auto 0;
+  margin: 0;
 }
 .social-stats .stats {
-  grid-area: stats;
+  margin: 0;
   font-size: 2em;
   color: #848484;
-  margin: 0 0 auto 8px;
 }
 @media (min-width: 768px) {
   .social-stats {
@@ -1134,6 +1129,13 @@ textarea {
   }
 }
 
+.network-stats {
+  padding-left: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .network {
   flex: 1 0 auto;
   padding: 1em;
@@ -1141,9 +1143,8 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #fafafa;
-  display: grid;
-  grid-template-columns: 60px auto;
-  grid-template-areas: "icon name" "icon stats";
+  display: flex;
+  justify-content: flex-start;
 }
 @media (max-width: 320px) {
   .network {
