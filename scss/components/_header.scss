@@ -7,7 +7,7 @@
   background-color: map-get($theme-primary, 3);
   color: #fff;
   padding: .75em;
-  @media (max-width: 375px) {
+  @media (max-width: 320px) {
     padding: .25em;
   }
 }
@@ -41,7 +41,7 @@
   }
   & span {
     padding-left: .5em;
-    @media (max-width: 375px) {
+    @media (max-width: 320px) {
       display: none;
     }
   }
@@ -82,7 +82,7 @@
     padding: .5em;
     cursor: pointer;
   }
-  @media (max-width: 375px) {
+  @media (max-width: 320px) {
     right: -40px;
   }
   @media (min-width: 768px) {

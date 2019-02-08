@@ -9,7 +9,7 @@
 }
 
 
-@media (max-width: 375px) {
+@media (max-width: 320px) {
   .sidebar-nav ul {
     @include flexy($disp: flex, $just: space-around);
     & li {
@@ -22,7 +22,7 @@
   padding: .75em 0;
   margin: .5em 0;
   display: block;
-  @media (max-width: 375px) {
+  @media (max-width: 320px) {
     padding-bottom: .5em;
     margin-bottom: 0;
   }
@@ -36,7 +36,7 @@
 .sidebar-nav .active {
   border: 3px solid map-get($theme-primary, 1);
   border-left: 3px solid map-get($theme-secondary, 2);
-  @media (max-width: 375px) {
+  @media (max-width: 320px) {
     border: 3px solid map-get($theme-primary, 1);
     border-bottom: 3px solid map-get($theme-secondary, 2);
   }
