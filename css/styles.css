@@ -529,15 +529,6 @@ ul {
     margin-bottom: 0;
   }
 }
-@media (min-width: 1024px) {
-  .sidebar-nav li a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-}
 
 .sidebar-nav .active {
   border: 3px solid #444367;
@@ -570,11 +561,6 @@ ul {
 .sidebar-nav span {
   display: none;
 }
-@media (min-width: 1024px) {
-  .sidebar-nav span {
-    display: inline-block;
-  }
-}
 
 .icon-dashboard,
 .icon-members,
@@ -595,6 +581,10 @@ ul {
 
 .icon-notification {
   padding-top: 4px;
+}
+.icon-notification path {
+  transition: 0.5s;
+  transition-property: fill;
 }
 
 .icon-notification:hover path {
@@ -629,6 +619,11 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.profile-pic {
+  width: 32px;
+  height: 32px;
 }
 
 form {
@@ -707,7 +702,7 @@ textarea {
 }
 @media (min-width: 1024px) {
   .search-bar fieldset {
-    padding-right: 1.5em;
+    padding-right: 24px;
   }
 }
 .search-bar input {
@@ -933,29 +928,38 @@ textarea {
 }
 @media (min-width: 1024px) {
   .alert {
-    margin-right: 1.5em;
+    margin-right: 24px;
   }
 }
 
-.new-members,
-.recent-activity {
-  font-size: 0.875em;
+.new-members a {
+  color: #5257b7;
 }
-.new-members .member a,
-.recent-activity .member a {
-  color: #686cb7;
-}
-.new-members .member a:hover,
-.recent-activity .member a:hover {
-  opacity: 0.8;
-}
-.new-members .activity,
-.recent-activity .activity {
+
+.activity {
   color: inherit;
 }
-.new-members .activity:hover,
-.recent-activity .activity:hover {
+
+.new-members a:hover,
+.activity:hover {
   opacity: 0.8;
+}
+
+.member,
+.activity {
+  font-size: 0.95em;
+}
+@media (max-width: 320px) {
+  .member,
+.activity {
+    font-size: 0.9em;
+  }
+}
+@media (min-width: 1024px) {
+  .member,
+.activity {
+    font-size: 1em;
+  }
 }
 
 .search {
@@ -989,7 +993,7 @@ textarea {
     grid-template-areas: "traffic        traffic" "daily-traffic  mobile-users" "social-stats   social-stats" "new-members    recent-activity" "message-user   settings";
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1400px) {
   .main {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "traffic        traffic         daily-traffic" "social-stats   social-stats    mobile-users" "new-members    recent-activity recent-activity" "message-user   message-user    settings";
@@ -1152,54 +1156,73 @@ textarea {
   }
 }
 
+.new-members ul,
+.recent-activity ul {
+  display: grid;
+  grid-gap: 1px;
+  background-color: #ccc;
+  grid-auto-rows: 80px;
+}
+.new-members ul li,
+.recent-activity ul li {
+  background-color: #fff;
+}
+@media (max-width: 320px) {
+  .new-members ul,
+.recent-activity ul {
+    grid-auto-rows: auto;
+  }
+}
+.new-members .member,
+.new-members .activity,
+.recent-activity .member,
+.recent-activity .activity {
+  display: flex;
+  justify-content: flex-start;
+}
+.new-members .arrow,
+.new-members .date,
+.recent-activity .arrow,
+.recent-activity .date {
+  margin: auto 0;
+}
+.new-members .profile-pic,
+.recent-activity .profile-pic {
+  margin: auto 8px auto 0;
+}
+.new-members .center-content,
+.recent-activity .center-content {
+  margin: auto 0;
+}
+.new-members .center-content .user,
+.new-members .center-content .action,
+.recent-activity .center-content .user,
+.recent-activity .center-content .action {
+  margin-bottom: 0;
+}
+.new-members .center-content .email,
+.new-members .center-content .ago,
+.recent-activity .center-content .email,
+.recent-activity .center-content .ago {
+  margin-top: 0;
+}
+.new-members .date,
+.new-members .arrow,
+.recent-activity .date,
+.recent-activity .arrow {
+  margin-left: auto;
+}
+
+.activity {
+  height: 100%;
+}
+
 .new-members {
   grid-area: new-members;
 }
 
 .recent-activity {
   grid-area: recent-activity;
-}
-
-.new-members ul,
-.recent-activity ul {
-  background-color: #ccc;
-  display: grid;
-  grid-gap: 1px;
-}
-.new-members ul .member,
-.new-members ul .activity,
-.recent-activity ul .member,
-.recent-activity ul .activity {
-  background-color: #fff;
-  display: grid;
-  grid-template-columns: 32px auto 60px;
-  grid-template-areas: "left-column  middle-top     right-column" "left-column  middle-bottom  right-column";
-  grid-gap: 6px;
-}
-
-.profile-pic,
-.date {
-  margin: auto;
-}
-
-.left-column {
-  grid-area: left-column;
-}
-
-.user,
-.action {
-  grid-area: middle-top;
-  margin-bottom: 0;
-}
-
-.email,
-.ago {
-  grid-area: middle-bottom;
-  margin-top: 0;
-}
-
-.right-column {
-  grid-area: right-column;
 }
 
 .message-user {

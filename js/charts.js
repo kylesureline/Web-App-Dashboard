@@ -1,4 +1,4 @@
-// document.addEventListener('DOMContentLoaded', (e) => {
+document.addEventListener('DOMContentLoaded', (e) => {
   // traffic buttons
   const traffic_btns = document.querySelector('.traffic-intervals');
 
@@ -60,7 +60,7 @@
     },
     options: {
       responsive: true,
-      // maintainAspectRatio: true,
+      maintainAspectRatio: true,
       title: {
         display: false
       },
@@ -88,7 +88,7 @@
     },
     options: {
       responsive: true,
-      // maintainAspectRatio: true,
+      maintainAspectRatio: true,
       title: {
         display: false
       },
@@ -127,7 +127,7 @@
     },
     options: {
       responsive: true,
-      // maintainAspectRatio: true,
+      maintainAspectRatio: true,
       legend: {
         position: 'right',
         labels: {
@@ -146,4 +146,4 @@
       }
     }
   });
-// });
+});

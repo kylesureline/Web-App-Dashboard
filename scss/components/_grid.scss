@@ -48,7 +48,7 @@
       "new-members    recent-activity"
       "message-user   settings";
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1400px) {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
       "traffic        traffic         daily-traffic"
@@ -158,18 +158,12 @@
     grid-area: name;
     color: map-get($theme-primary, 3);
     font-size: 1em;
-    // margin: auto 0 0 8px;
     margin: 0;
   }
-  .icon-bg {
-    // grid-area: icon;
-  }
   .stats {
-    // grid-area: stats;
     margin: 0;
     font-size: 2em;
     color: map-get($theme-tertiary, 2);
-    // margin: 0 0 auto 8px;
   }
   @media (min-width: 768px) {
     flex-direction: row;
@@ -196,6 +190,51 @@
   }
 }
 
+.new-members,
+.recent-activity {
+  & ul {
+    display: grid;
+    grid-gap: 1px;
+    background-color: map-get($theme-tertiary, 4);
+    grid-auto-rows: 80px;
+    li {
+      background-color: #fff;
+    }
+    @media (max-width: 320px) {
+      grid-auto-rows: auto;
+    }
+  }
+  .member,
+  .activity {
+    @include flexy($disp: flex, $just: flex-start);
+  }
+  .arrow,
+  .date {
+    margin: auto 0;
+  }
+  .profile-pic {
+    margin: auto 8px auto 0;
+  }
+  .center-content {
+    margin: auto 0;
+    .user,
+    .action {
+      margin-bottom: 0;
+    }
+    .email,
+    .ago {
+      margin-top: 0;
+    }
+  }
+  .date,
+  .arrow {
+    margin-left: auto;
+  }
+}
+
+.activity {
+  height: 100%;
+}
 
 .new-members {
   grid-area: new-members;
@@ -203,48 +242,6 @@
 
 .recent-activity {
   grid-area: recent-activity;
-}
-
-.new-members ul,
-.recent-activity ul {
-  background-color: map-get($theme-tertiary, 4);
-  display: grid;
-  grid-gap: 1px;
-  .member,
-  .activity {
-    background-color: #fff;
-    display: grid;
-    grid-template-columns: 32px auto 60px;
-    grid-template-areas:
-      "left-column  middle-top     right-column"
-      "left-column  middle-bottom  right-column";
-    grid-gap: 6px;
-  }
-}
-
-.profile-pic,
-.date {
-  margin: auto;
-}
-
-.left-column {
-  grid-area: left-column;
-}
-
-.user,
-.action {
-  grid-area: middle-top;
-  margin-bottom: 0;
-}
-
-.email,
-.ago {
-  grid-area: middle-bottom;
-  margin-top: 0;
-}
-
-.right-column {
-  grid-area: right-column;
 }
 
 .message-user {

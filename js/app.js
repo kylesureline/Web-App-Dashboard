@@ -1,4 +1,4 @@
-// document.addEventListener('DOMContentLoaded', (e) => {
+document.addEventListener('DOMContentLoaded', (e) => {
   const notificationLink = document.querySelector('.notification-link');
   const notificationIndicator = document.querySelector('.notification-indicator');
   const notificationList = document.querySelector('.notification-list');
@@ -206,4 +206,4 @@
     }
   });
 
-// });
+});

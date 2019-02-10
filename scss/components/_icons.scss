@@ -21,6 +21,10 @@
 
 .icon-notification {
   padding-top: 4px;
+  & path {
+    transition: .5s;
+    transition-property: fill;
+  }
 }
 
 .icon-notification:hover path {
@@ -53,4 +57,9 @@
   width: 60px;
   height: 60px;
   @include flexy($disp: flex, $just: center, $align-items: center);
+}
+
+.profile-pic {
+  width: 32px;
+  height: 32px;
 }

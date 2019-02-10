@@ -26,11 +26,6 @@
     padding-bottom: .5em;
     margin-bottom: 0;
   }
-  @media (min-width: 1024px) {
-    @include flexy($disp: flex, $just: space-between, $align-items: center);
-    padding-left: 1em;
-    padding-right: 1em;
-  }
 }
 
 .sidebar-nav .active {
@@ -61,7 +56,4 @@
 
 .sidebar-nav span {
   display: none;
-  @media (min-width: 1024px) {
-    display: inline-block;
-  }
 }
