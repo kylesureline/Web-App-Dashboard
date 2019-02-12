@@ -550,24 +550,6 @@ ul {
     margin-bottom: 0;
   }
 }
-@media (min-width: 1400px) {
-  .sidebar-nav li a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-}
-
-.sidebar-nav span {
-  display: none;
-}
-@media (min-width: 1400px) {
-  .sidebar-nav span {
-    display: inline-block;
-  }
-}
 
 .sidebar-nav .active {
   border: 3px solid #444367;
@@ -1009,12 +991,6 @@ textarea {
   .main {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "traffic        traffic" "daily-traffic  mobile-users" "social-stats   social-stats" "new-members    recent-activity" "message-user   settings";
-  }
-}
-@media (min-width: 1400px) {
-  .main {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "traffic        traffic         daily-traffic" "social-stats   social-stats    mobile-users" "new-members    recent-activity recent-activity" "message-user   message-user    settings";
   }
 }
 

@@ -46,18 +46,6 @@
     padding-bottom: .5em;
     margin-bottom: 0;
   }
-  @media (min-width: 1400px) {
-    @include flexy($disp: flex, $just: space-between, $align-items: center);
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-}
-
-.sidebar-nav span {
-  display: none;
-  @media (min-width: 1400px) {
-    display: inline-block;
-  }
 }
 
 .sidebar-nav .active {

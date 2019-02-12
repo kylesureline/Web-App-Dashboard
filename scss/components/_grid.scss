@@ -48,14 +48,6 @@
       "new-members    recent-activity"
       "message-user   settings";
   }
-  @media (min-width: 1400px) {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-      "traffic        traffic         daily-traffic"
-      "social-stats   social-stats    mobile-users"
-      "new-members    recent-activity recent-activity"
-      "message-user   message-user    settings";
-  }
 }
 
 .main > div,
