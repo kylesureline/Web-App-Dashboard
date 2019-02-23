@@ -952,7 +952,7 @@ textarea {
 @media (max-width: 320px) {
   .member,
 .activity {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
 }
 @media (min-width: 1024px) {
