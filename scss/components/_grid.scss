@@ -15,6 +15,7 @@
     "aside search"
     "aside main";
   @media (max-width: 320px) {
+    grid-template-columns: 1fr;
     grid-template-areas:
       "header"
       "aside"
