@@ -776,8 +776,7 @@ textarea {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  transition: 0.4s;
-  transition-property: background-color;
+  transition: 0.4s background-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -791,8 +790,7 @@ textarea {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  transition: 0.4s;
-  transition-property: transform;
+  transition: 0.4s transform;
 }
 .switch .slider .on,
 .switch .slider .off {
@@ -849,8 +847,7 @@ textarea {
 }
 
 .message-sent {
-  transition: 1s;
-  transition-property: opacity;
+  transition: 1s opacity;
   font-style: italic;
   opacity: 1;
   padding-left: 0.5em;
@@ -861,8 +858,7 @@ textarea {
 .user-error {
   font-style: italic;
   color: red;
-  transition-property: opacity;
-  transition: 0.5s;
+  transition: 0.5s opacity;
 }
 
 .settings form {

@@ -137,8 +137,7 @@ textarea {
     right: 0;
     bottom: 0;
     background-color: map-get($theme-tertiary, 4);
-    transition: .4s;
-    transition-property: background-color;
+    transition: .4s background-color;
     @include flexy($disp: flex, $just: space-between, $align-items: center);
     &:before {
       border-radius: 50%;
@@ -149,8 +148,7 @@ textarea {
       left: 4px;
       bottom: 4px;
       background-color: white;
-      transition: .4s;
-      transition-property: transform;
+      transition: .4s transform;
     }
     .on,
     .off {
@@ -214,8 +212,7 @@ textarea {
 }
 
 .message-sent {
-  transition: 1s;
-  transition-property: opacity;
+  transition: 1s opacity;
   font-style: italic;
   opacity: 1;
   padding-left: .5em;
@@ -226,8 +223,7 @@ textarea {
 .user-error {
   font-style: italic;
   color: red;
-  transition-property: opacity;
-  transition: .5s;
+  transition: .5s opacity;
 }
 
 .settings {
