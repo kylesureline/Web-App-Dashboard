@@ -510,7 +510,7 @@ ul {
 }
 
 .sidebar-nav a {
-  border-left: 3px solid #444367;
+  border: 3px solid #444367;
   color: #a9a9a9;
 }
 
@@ -546,17 +546,19 @@ ul {
 }
 @media (max-width: 320px) {
   .sidebar-nav li a {
-    padding-bottom: 0.5em;
-    margin-bottom: 0;
+    padding: 0.5em;
+    margin: 1px;
   }
 }
 
-.sidebar-nav .active {
+.sidebar-nav .active,
+.sidebar-nav a:hover {
   border: 3px solid #444367;
   border-left: 3px solid #73c96e;
 }
 @media (max-width: 320px) {
-  .sidebar-nav .active {
+  .sidebar-nav .active,
+.sidebar-nav a:hover {
     border: 3px solid #444367;
     border-bottom: 3px solid #73c96e;
   }
