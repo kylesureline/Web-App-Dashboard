@@ -9,12 +9,12 @@
 }
 
 .sidebar-nav a {
-  border-left: 3px solid map-get($theme-primary, 1);
+  border: 3px solid map-get($theme-primary, 1);
   color: map-get($theme-tertiary, 3);
 }
 
 .sidebar-nav .active {
-  color: #fff
+  color: #fff;
 }
 
 .sidebar-nav svg path {
@@ -43,12 +43,13 @@
   margin: .5em 0;
   display: block;
   @media (max-width: 320px) {
-    padding-bottom: .5em;
-    margin-bottom: 0;
+    padding: .5em;
+    margin: 1px;
   }
 }
 
-.sidebar-nav .active {
+.sidebar-nav .active,
+.sidebar-nav a:hover {
   border: 3px solid map-get($theme-primary, 1);
   border-left: 3px solid map-get($theme-secondary, 2);
   @media (max-width: 320px) {
